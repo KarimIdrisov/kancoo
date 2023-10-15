@@ -1,0 +1,164 @@
+main.products{
+  @media (width <= $desktop){ padding-top: 2.19rem; }
+  @media (width > $desktop){ padding-top: 3.44rem; }
+
+  .bg::before{ background: linear-gradient(3deg, #FFF 0%, rgba(205, 236, 255, 0.50) 100%); }
+
+  section{
+    @media (width <= $desktop){ margin-bottom: 6.28rem; }
+    @media (width > $desktop){ margin-bottom: 7.5rem; }
+
+    p{
+      @media (width > $desktop){ font-size: 1rem; }
+      @media (width <= $desktop){ margin-top: .62rem; }
+      @media (width > $desktop){ margin-top: 1.25rem; }
+    }
+
+    .cards{
+      display: grid;
+      @media (width <= $desktop){ grid-template-columns: repeat(auto-fit, minmax(min(100%, 10.375rem), 1fr)); }
+      @media (width > $desktop){ grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.333rem), 1fr)); }
+      @media (width <= $desktop){ gap: .44rem; }
+      @media (width > $desktop){ gap: .62rem; }
+      @media (width <= $desktop){ padding-top: 1.25rem; }
+      @media (width > $desktop){ padding-top: 2.5rem; }
+      @media (width <= $desktop){ margin-bottom: 1.28rem; }
+      @media (width > $desktop){ margin-bottom: 1.31rem; }
+      .card{
+        cursor: pointer;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        @media (width <= $desktop){ padding: .88rem .87rem .81rem .81rem; }
+        @media (width > $desktop){ padding: .94rem .94rem .91rem .94rem; }
+        @media (width > $desktop){
+          transition: $transition;
+          &:hover{ box-shadow: 0 .25rem .25rem 0 rgb(#000, .25); }
+        }
+        &.opened .arrow-right{ transform: rotate(90deg); }
+        .card-title{
+          @media (width <= $desktop){ font-size: .625rem; }
+          @media (width > $desktop){ font-size: 1rem; }
+        }
+        .to-order{
+          color: $text-light;
+          @media (width <= $desktop){ font-size: .5rem; }
+          @media (width > $desktop){ font-size: .875rem; }
+          @media (width <= $desktop){ margin-block: .15rem .88rem; }
+          @media (width > $desktop){ margin-block: .38rem 1.56rem; }
+        }
+        .product-img{
+          align-self: center;
+          @media (width <= $desktop){ width: 80.5755395683%; }
+          @media (width > $desktop){ width: 81.3583384615%; }
+          height: auto;
+        }
+        .arrow-right{
+          align-self: flex-end;
+          transition: $transition;
+          &.mobile{
+            @media (width > $desktop){ display: none; }
+          }
+          &:not(.mobile){
+            @media (width <= $desktop){ display: none; }
+          }
+        }
+      }
+    }
+
+    .details{
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      scroll-margin: var(--wrapper-padding-inline);
+      @media (width <= $desktop){ padding: .53rem 1.25rem 1.25rem; }
+      @media (width > $desktop){ padding: 2.81rem 3rem 2.81rem 2.94rem; }
+      .cross-cont{
+        cursor: pointer;
+        @media (width > $desktop){
+          position: absolute;
+          top: 1.56rem;
+          right: 1.56rem;
+        }
+        @media (width <= $desktop){
+          align-self: flex-end;
+          padding: .75rem;
+          margin: -0.75rem;
+          margin-bottom: .5rem;
+        }
+        .cross{
+          display: block;
+          &.mobile{ @media (width > $desktop){ display: none; } }
+          &:not(.mobile){ @media (width <= $desktop){ display: none; } }
+        }
+      }
+      .cont{
+        &.up{
+          @media (width > $desktop){
+            display: flex;
+            gap: 2.5rem;
+          }
+          @media (width <= $desktop){ margin-bottom: 1.25rem; }
+          @media (width > $desktop){ margin-bottom: 2.5rem; }
+        }
+      }
+      .img-cont{
+        @media (width > $desktop){ max-width: 15rem; }
+        display: grid;
+        place-items: center;
+        width: 91.3907284768%;
+        aspect-ratio: 1/1;
+        @media (width <= $desktop){ box-shadow: 0 .25rem .5rem rgb(#000, .25); }
+        @media (width > $desktop){ box-shadow: 0 .25rem .25rem 0 rgb(#000, .25); }
+        @media (width <= $desktop){ margin: 0 auto 1.25rem; }
+        img{
+          width: 80%;
+          height: auto;
+        }
+      }
+      .head{
+        max-width: 45.3125rem;
+        margin-right: 1.5625rem;
+        h1{
+          font-weight: 500;
+          @media (width <= $desktop){ font-size: 1rem; }
+          @media (width > $desktop){ font-size: 1.25rem; }
+          margin-bottom: .31rem;
+        }
+        .to-order{
+          color: $text-light;
+          @media (width <= $desktop){ font-size: .625rem; }
+          @media (width > $desktop){ font-size: 1.125rem; }
+          @media (width <= $desktop){ margin-bottom: .62rem; }
+          @media (width > $desktop){ margin-bottom: 1.25rem; }
+        }
+        .btn{
+          @media (width <= $desktop){ font-size: .625rem; }
+          @media (width > $desktop){ font-size: 1rem; }
+          border-radius: .3125rem;
+          @media (width <= $desktop){ padding: .62rem; }
+          @media (width > $desktop){ padding: .9375rem; }
+        }
+      }
+      .about{
+        display: flex;
+        flex-flow: column;
+        gap: 1.25rem;
+        @media (width <= $desktop){ padding-bottom: .62rem; }
+        h2{
+          font-weight: 400;
+          @media (width <= $desktop){ font-size: .75rem; }
+          @media (width > $desktop){ font-size: 1.25rem; }
+          @media (width <= $desktop){ margin-bottom: .31rem; }
+          @media (width > $desktop){ margin-bottom: .62rem; }
+        }
+        p{
+          color: $text-light;
+          @media (width <= $desktop){ font-size: .625rem; }
+          @media (width > $desktop){ font-size: 1.125rem; }
+          span{ color: $text; }
+        }
+      }
+    }
+  }
+}

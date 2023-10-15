@@ -1,0 +1,172 @@
+section.contact-form{
+  &.popout{
+    max-width: unset;
+    @media (width <= $desktop){
+      position: fixed;
+      inset: 0;
+    }
+    @media (width > $desktop){
+      position: absolute;
+      inset: 0;
+    }
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    margin-bottom: 0;
+    .bg{
+      position: absolute;
+      inset: 0;
+      background: rgb(#2c2c2c, .5);
+    }
+    .wrapper{
+      position: relative;
+      scroll-margin: 1rem;
+      .cross-cont{
+        cursor: pointer;
+        position: absolute;
+        top: .94rem;
+        right: .94rem;
+        padding: .75rem;
+        margin: -0.75rem;
+        .cross{
+          display: block;
+          &.mobile{ @media (width > $desktop){ display: none; } }
+          &:not(.mobile){ @media (width <= $desktop){ display: none; } }
+        }
+    }
+    }
+  }
+  .wrapper{
+    @media (width <= $desktop){ box-shadow: 0 .25rem .5rem rgb(#000, .25); }
+    @media (width > $desktop){ box-shadow: 0 .25rem 1rem rgb(#000, .25); }
+    @media (width <= $desktop){ padding: 2.81rem 2.62rem 2.81rem 2.69rem; }
+    @media (width > $desktop){ padding: 3.75rem 4.99rem 5.04rem 5rem; }
+  }
+  .cont, .buttons{
+    @media (width > $desktop){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+      gap: 0 17.3076923077%;
+    }
+  }
+  .cont{
+    @media (width <= $desktop){ margin-top: 1.7rem; }
+    @media (width > $desktop){ margin-block: 3.75rem; }
+  }
+  input, textarea{
+    width: 100%;
+    @media (width <= $desktop){ font-size: .625rem; }
+    @media (width > $desktop){ font-size: 1rem; }
+    background: none;
+    border: none;
+    @media (width <= $desktop){ border-bottom: .03125rem solid $text; }
+    @media (width > $desktop){ border-bottom: .0625rem solid $text; }
+    @media (width <= $desktop){ padding-block: .8rem; }
+    @media (width > $desktop){ padding-block: .94rem; }
+    &:focus-visible{ outline: none; }
+    &::placeholder{ color: $text-light; }
+    &.red{ &::placeholder{ color: red; } }
+  }
+  input{
+    @media (width <= $desktop){ margin-bottom: 1.09rem; }
+    @media (width > $desktop){ margin-bottom: 2.18rem; }
+  }
+  textarea{
+    resize: vertical;
+    @media (width > $desktop){ grid-area: 1 / 2 / 4 / 3; }
+    @media (width <= $desktop){ height: 3.5475rem; }
+    @media (width > $desktop){ min-height: 3.16125rem; }
+    @media (width > $desktop){ max-height: 13.8425rem; }
+    @media (width <= $desktop){ margin-bottom: 1.25rem; }
+  }
+  .buttons{
+    @media (width <= $desktop){
+      display: flex;
+      flex-flow: column;
+      gap: 2.5rem;
+    }
+    @media (width > $desktop){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+  .files-select{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    input[type=file]{
+      pointer-events: none;
+      opacity: 0;
+      position: absolute;
+      width: 0;
+      &:focus-visible + label{ outline: auto; }
+    }
+    label{
+      flex-shrink: 0;
+      cursor: pointer;
+      align-self: flex-start;
+      line-height: .625rem;
+    }
+    .selected-files{
+      .file-label{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .5rem;
+        @media (width <= $desktop){ font-size: .5rem; }
+        line-height: 2;
+        .file-name{
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .cross{
+          padding: 0;
+          margin: 0;
+          img{
+            &.mobile{
+              width: 1rem;
+              height: 1rem;
+            }
+            &:not(.mobile){
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  label, button{
+    display: flex;
+    align-items: center;
+    @media (width <= $desktop){ gap: .31rem; }
+    @media (width > $desktop){ gap: .62rem; }
+    @media (width <= $desktop){ font-size: .5rem; }
+    @media (width > $desktop){ font-size: 1rem; }
+    font-weight: 500;
+    padding: 1rem;
+    margin: -1rem;
+    img{
+      &.mobile{
+        @media (width > $desktop){ display: none; }
+      }
+      &:not(.mobile){
+        @media (width <= $desktop){ display: none; }
+      }
+    }
+  }
+  button{
+    @media (width <= $desktop){ align-self: flex-end; }
+    @media (width > $desktop){ margin-left: auto; }
+    &.disabled{
+      cursor: default;
+      opacity: .57;
+    }
+  }
+}

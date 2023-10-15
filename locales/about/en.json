@@ -1,0 +1,33 @@
+{
+  "firm": {
+    "title": "Company"
+  },
+  "services": {
+    "title": "Services",
+    "description": "We implement a full production cycle and provide the following services:",
+    "cards": [
+      "Molds for casting thermoplastic materials",
+      "Molds for rubber pressing and rubber casting",
+      "Dies (sequential action, double-row, punching, bending, drawing, combined)",
+      "Production of bending tools according to the catalog",
+      "Equipment design and supply",
+      "Metalworking according to drawings of various types of complexity in a short time",
+      "Launch of a production line at our facilities",
+      "Production of the finished product at our facilities at the customer’s request",
+      "Selection of standard products for dies and molds to reduce the cost of the die and increase the service life (pushers, guide elements, dies, punches, inserts and signs, springs, gauges, fastening elements, die separators)"
+    ]
+  },
+  "q_a": [
+    {
+      "question": "What is required to calculate the cost of products?",
+      "answer": "To quickly and accurately calculate the cost of products you need:<br/>− 3D model, drawing, sample or photo of the product with dimensions;<br/>− Product material;<br/>− Weight of the product;<br/>− Approximate number of products that you plan to produce per month/quarter/year;<br/>− If there is a mold, the number of slots;<br/>− If there is a mold, the duration of one casting cycle.<br/><br/>Even if you do not have all the available information, you can send an application to our email, receive specialist advice and a preliminary commercial offer."
+    },
+    {
+      "question": "Is there a guarantee for molds when used in our production?",
+      "answer": "All of our molds are guaranteed for 1 year or the number of closures, whichever comes first. When operating molds at our enterprise, we can offer our customers free mold maintenance for the entire period of cooperation."
+    }
+  ],
+  "sertificates": {
+    "title": "Certificates<br/>and licenses"
+  }
+}

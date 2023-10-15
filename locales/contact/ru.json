@@ -1,0 +1,10 @@
+{
+  "contacts": {
+    "title": "Контакты",
+    "contactPerson": "Контактное лицо",
+    "personName": "Евгений",
+    "phone": "Телефон",
+    "address": "Адрес",
+    "messangers": "Мессенджеры"
+  }
+}

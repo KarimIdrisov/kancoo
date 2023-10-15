@@ -1,0 +1,12 @@
+{
+  "links": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About Company",
+    "contact": "Contacts"
+  },
+  "lang": {
+    "title": "Language",
+    "code": "EN"
+  }
+}

@@ -1,0 +1,156 @@
+header{
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (width <= $desktop){ padding-top: 3.12rem; }
+  @media (width > $desktop){ padding-block: 1.56rem; }
+
+  .logo{
+    @media (width <= $desktop){ display: none; }
+  }
+
+
+  
+  // buttons
+
+  .menu-btn, .lang-btn, .close-menu-btn{
+    img{ width: 100%; height: 100%; }
+  }
+
+  .menu-btn{
+    @media (width <= $desktop){
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    @media (width > $desktop){ display: none; }
+  }
+
+  .lang-btn{
+    @media (width <= $desktop){
+      width: 1.5rem;
+      height: 1.5rem;
+      .desktop{ display: none; }
+    }
+    @media (width > $desktop){
+      color: #FFF;
+      background: rgb($primary, .749);
+      border-radius: .3125rem;
+      padding: .44rem 2.5rem;
+      .mobile{ display: none; }
+      .desktop{
+        display: flex;
+        align-items: center;
+        gap: .62rem;
+      }
+    }
+  }
+
+  .close-menu-btn{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0 10.974595843vh auto;
+  }
+
+
+
+  // nav & menu
+
+  .close-area{
+    position: fixed;
+    inset: 0;
+    background: rgb(#000, .5);
+    transition: $transition;
+    &.hidden{
+      pointer-events: none;
+      background: none;
+    }
+  }
+
+  nav{
+    @media (width <= $desktop){ display: none; }
+    width: 100%;
+    max-width: 30.4375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3.12rem;
+    a, button{
+      transition: $transition;
+      &:hover{ font-weight: 700; }
+    }
+  }
+
+  menu{
+    &.mobile{
+      @media (width > $desktop){ display: none; }
+    }
+    &:not(.mobile){
+      @media (width <= $desktop){ display: none; }
+    }
+    position: fixed;
+    top: 0;
+    right: 0;
+    @media (width <= $desktop){ width: 100%; }
+    @media (width > $desktop){ width: 31.25rem; }
+    height: 100%;
+    background: #fff;
+    transition: $transition;
+    @media (width <= $desktop){ padding: 1.12rem; }
+    @media (width > $desktop){ padding: 1.56rem; }
+    @media (width <= $desktop){ padding-left: 16.1641025641%; }
+    @media (width > $desktop){ padding-left: 5rem; }
+    &.hidden{
+      visibility: hidden;
+      @media (width <= $desktop){ transform: translateX(-100%); }
+      @media (width > $desktop){ transform: translateX(31.25rem); }
+    }
+    
+    .list{
+      display: flex;
+      flex-flow: column;
+      a, button, div{
+        text-align: left;
+        @media (width <= $desktop){ font-size: 1.5rem; }
+        @media (width > $desktop){ font-size: 2rem; }
+        font-weight: 500;
+        line-height: 1.6;
+      }
+    }
+    .sublist{
+      display: grid;
+      grid-template-rows: 1fr;
+      transition: $transition;
+      @media (width <= $desktop){ padding-block: .5rem; }
+      @media (width > $desktop){ padding-block: 1.25rem; }
+      &.hidden{
+        grid-template-rows: 0fr;
+        padding: 0;
+      }
+      div{ overflow: hidden; }
+      a{
+        display: flex;
+        align-items: center;
+        color: $text-light;
+        @media (width <= $desktop){ font-size: 0.75rem; }
+        @media (width > $desktop){ font-size: 1.125rem; }
+        font-weight: 500;
+        line-height: 1.8;
+        transition: $transition;
+        &:hover{
+          color: $text;
+          .arrow-right{
+            opacity: 1;
+            margin-left: .63rem;
+          }
+        }
+        // arrow right
+        .arrow-right{
+          opacity: 0;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}

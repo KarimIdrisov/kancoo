@@ -1,0 +1,89 @@
+section.opportunities{
+  width: 100%;
+
+  .carousel{
+    @media (width <= $desktop){ overflow: auto; }
+    @media (width <= $desktop){ display: flex; }
+    @media (width > $desktop){ display: grid; }
+    @media (width > $desktop){ grid-template-columns: repeat(3, 1fr); }
+    @media (width <= $desktop){ gap: .62rem; }
+    @media (width > $desktop){ gap: 2.15rem; }
+    @media (width <= $desktop){
+      padding: 7rem .62rem .62rem 6.5rem;
+      &:hover{ padding-bottom: .12rem; }
+    }
+    @media (width > $desktop){ padding-block: 5.94rem 6.87rem; }
+  }
+
+  .card-cont{
+    position: relative;
+    flex-shrink: 0;
+    @media (width <= $desktop){ width: 9.3125rem; }
+    @media (width <= $desktop){ height: 11.125rem; }
+    @media (width > $desktop){ height: 28.125rem; }
+    @media (width <= $desktop){ border-radius: .3125rem; }
+    @media (width > $desktop){ border-radius: .625rem; }
+    &.opened{
+      .img-cont{
+        @media (width <= $desktop){ transform: translate(-3rem, -4.31rem) rotate(-15deg); }
+        @media (width > $desktop){ transform: translate(.72rem, -2.5rem) rotate(-6deg); }
+      }
+      .card{
+        color: #fff;
+        background: $primary;
+        box-shadow: 0 .25rem .5rem 0 rgb(#000, .25);
+        .card-title{ border-color: #fff; }
+        @media (width > $desktop){ transform: translate(-0.706875rem, 5.68125rem) rotate(3.002deg); }
+      }
+    }
+    .img-cont{
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      transition: $transition;
+      transform-origin: bottom left;
+      img{
+        width: auto;
+        height: 100%;
+        &.img-0{
+          width: 100%;
+          height: auto;
+        }
+        &.img-1{
+          transform: translateX(-15%);
+        }
+        &.img-2{
+          transform: translateX(-5%);
+        }
+      }
+    }
+    .card{
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      border-radius: inherit;
+      transition: $transition;
+      @media (width > $desktop){ transform-origin: bottom right; }
+      @media (width <= $desktop){ padding: .62rem .62rem .62rem .69rem; }
+      @media (width > $desktop){ padding: 1.55rem 1.58rem 1.57rem 1.54rem; }
+      .card-title{
+        @media (width <= $desktop){ font-size: .75rem; }
+        @media (width > $desktop){ font-size: 2rem; }
+        @media (width <= $desktop){ border-bottom: .03225806452rem solid $text; }
+        @media (width > $desktop){ border-bottom: .0625rem solid $text; }
+        @media (width <= $desktop){ padding-bottom: .31rem; }
+        @media (width > $desktop){ padding-bottom: .62rem; }
+      }
+      p{
+        @media (width <= $desktop){ font-size: .5rem; }
+        @media (width > $desktop){ font-size: 1.125rem; }
+      }
+    }
+  }
+}

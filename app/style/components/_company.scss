@@ -1,0 +1,54 @@
+section.company{
+  .title{
+    @media (width <= $desktop){ margin-bottom: 1.25rem; }
+    @media (width > $desktop){ margin-bottom: -2.5rem; }
+  }
+
+  p{
+    @media (width > $desktop){ font-size: 1rem; }
+  }
+
+  .grid{
+    display: grid;
+    @media (width > $desktop){
+      grid-template-columns: 68.75% 29.5833333333%;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .cont{
+      display: grid;
+      &:nth-of-type(1){
+        @media (width > $desktop){
+          grid-template-columns: 27.272727% 70.303030%;
+          justify-content: space-between;
+          gap: 1.25rem;
+        }
+        .video{
+          @media (width <= $desktop){ grid-area: 1 / 1 / 2 / 2; }
+          background: #fff;
+          aspect-ratio: 21.3125/12;
+          @media (width <= $desktop){ margin-bottom: 1.88rem; }
+        }
+        .p1{
+          @media (width <= $desktop){ margin-bottom: 1.25rem; }
+        }
+      }
+      &:nth-of-type(2){
+        @media (width <= $desktop){ grid-template-columns: 52.9411764706% auto; }
+        @media (width <= $desktop){ grid-template-rows: auto auto; }
+        @media (width <= $desktop){ gap: 1.25rem .62rem; }
+        @media (width > $desktop){ gap: 3.75rem; }
+      }
+      .p2:nth-of-type(1){
+        @media (width <= $desktop){ text-align: right; }
+      }
+      img{
+        @media (width <= $desktop){ grid-area: 1 / 1 / 2 / 2; }
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

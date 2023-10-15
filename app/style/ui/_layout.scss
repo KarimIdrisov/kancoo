@@ -1,0 +1,59 @@
+$desktop: 48rem;
+
+:root{
+  @media (width <= $desktop){ --wrapper-padding-inline: 1.56rem; }
+  @media (width > $desktop){ --wrapper-padding-inline: 3.12rem; }
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 74.3125rem + 3.12rem;
+  padding-inline: var(--wrapper-padding-inline);
+  margin-inline: auto;
+}
+
+body{
+  position: relative;
+}
+
+main > .bg{
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  &::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+}
+
+section{
+  @media (width <= $desktop){ margin-bottom: 6.25rem; }
+  @media (width > $desktop){ margin-bottom: 10.62rem; }
+}
+
+.card{
+  background: #fff;
+  transition: $transition;
+  @media (width <= $desktop){ border-radius: .3125rem; }
+  @media (width > $desktop){ border-radius: .625rem; }
+}
+
+.carousel{
+  padding-bottom: .25rem;
+  &:not(:hover){
+    padding-bottom: .75rem;
+    &::-webkit-scrollbar{ display: none; }
+  }
+  &::-webkit-scrollbar{
+    position: absolute;
+    height: .5rem;
+  }
+  &::-webkit-scrollbar-thumb{
+    background: #bbb;
+    border-radius: 100vmax;
+    &:hover{
+      background: #aaa;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+footer{
+  .container{
+    display: flex;
+    @media (width <= $desktop){ flex-flow: column-reverse; }
+    align-items: center;
+    @media (width > $desktop){ justify-content: space-between; }
+    gap: 3.12rem;
+    @media (width <= $desktop){ border-top: .03125rem solid #000; }
+    @media (width > $desktop){ border-top: .0625rem solid $text-light; }
+    @media (width <= $desktop){ padding-block: 3.12rem; }
+    @media (width > $desktop){ padding-block: 3.25rem 6.93rem; }
+  }
+
+  .copyright{
+    display: flex;
+    @media (width <= $desktop){ flex-flow: column; }
+    @media (width <= $desktop){ align-items: center; }
+    @media (width > $desktop){ gap: 1.31rem; }
+    img{
+      @media (width <= $desktop){ width: 2.1875rem; }
+      @media (width <= $desktop){ height: 1.5625rem; }
+      @media (width > $desktop){ width: 4.375rem; }
+      @media (width > $desktop){ height: 3.125rem; }
+      @media (width <= $desktop){ margin-bottom: .62rem; }
+    }
+    .paragraphs{
+      display: flex;
+      flex-flow: column;
+      @media (width <= $desktop){ align-items: center; }
+      @media (width <= $desktop){ gap: .31rem; }
+      @media (width > $desktop){ gap: .75rem; }
+      p{
+        color: $text-light;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: "Inter";
+        &:nth-of-type(1){
+          @media (width <= $desktop){ font-size: .625rem; }
+          @media (width > $desktop){ font-size: 1.375rem; }
+        }
+        &:nth-of-type(2){
+          @media (width <= $desktop){ font-size: .5rem; }
+          @media (width > $desktop){ font-size: 1.125rem; }
+        }
+      }
+    }
+  }
+
+  .links{
+    display: flex;
+    justify-content: center;
+    @media (width > $desktop){ align-items: center; }
+    flex-wrap: wrap;
+    @media (width <= $desktop){ gap: .62rem 1.25rem; }
+    @media (width > $desktop){ gap: 2.5rem; }
+    a{
+      color: #000;
+      leading-trim: both;
+      text-edge: cap;
+      font-size: .625rem;
+      font-weight: 500;
+      padding: .5rem;
+      margin: -0.5rem;
+      img{
+        @media (width <= $desktop){ display: none; }
+      }
+      span{
+        @media (width > $desktop){ display: none; }
+      }
+    }
+  }
+}

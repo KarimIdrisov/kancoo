@@ -1,0 +1,79 @@
+{
+  "title": "Equipment",
+  "to_order": "to order",
+  "contact": "write to us",
+  "cards": [
+    {
+      "name": "111_Pneumatic feeding devices",
+      "about": [
+        {
+          "title": "Characteristics",
+          "p": [
+            {
+              "name": "Manufacturer",
+              "p": "Own production"
+            }
+          ]
+        },
+        {
+          "title": "Description",
+          "p": "Pneumatic feeders are designed to feed various types of belt material into the processing area and are universal. A carefully designed design allows you to get maximum impact with minimal size and weight. The wide functionality of pneumatic feeding devices guarantees high-quality work in conjunction with various types of equipment.<br/>A large selection of additional devices and accessories allows you to significantly expand the possibilities for their use. Pneumatic pincer feeders do not require large amounts of production time for installation, connection and adjustment."
+        }
+      ]
+    },
+    {
+      "name": "222_Pneumatic feeding devices",
+      "about": [
+        {
+          "title": "Characteristics",
+          "p": [
+            {
+              "name": "Manufacturer",
+              "p": "Own production"
+            }
+          ]
+        },
+        {
+          "title": "Description",
+          "p": "Pneumatic feeders are designed to feed various types of belt material into the processing area and are universal. A carefully designed design allows you to get maximum impact with minimal size and weight. The wide functionality of pneumatic feeding devices guarantees high-quality work in conjunction with various types of equipment.<br/>A large selection of additional devices and accessories allows you to significantly expand the possibilities for their use. Pneumatic pincer feeders do not require large amounts of production time for installation, connection and adjustment."
+        }
+      ]
+    },
+    {
+      "name": "333_Pneumatic feeding devices",
+      "about": [
+        {
+          "title": "Characteristics",
+          "p": [
+            {
+              "name": "Manufacturer",
+              "p": "Own production"
+            }
+          ]
+        },
+        {
+          "title": "Description",
+          "p": "Pneumatic feeders are designed to feed various types of belt material into the processing area and are universal. A carefully designed design allows you to get maximum impact with minimal size and weight. The wide functionality of pneumatic feeding devices guarantees high-quality work in conjunction with various types of equipment.<br/>A large selection of additional devices and accessories allows you to significantly expand the possibilities for their use. Pneumatic pincer feeders do not require large amounts of production time for installation, connection and adjustment."
+        }
+      ]
+    },
+    {
+      "name": "444_Pneumatic feeding devices",
+      "about": [
+        {
+          "title": "Characteristics",
+          "p": [
+            {
+              "name": "Manufacturer",
+              "p": "Own production"
+            }
+          ]
+        },
+        {
+          "title": "Description",
+          "p": "Pneumatic feeders are designed to feed various types of belt material into the processing area and are universal. A carefully designed design allows you to get maximum impact with minimal size and weight. The wide functionality of pneumatic feeding devices guarantees high-quality work in conjunction with various types of equipment.<br/>A large selection of additional devices and accessories allows you to significantly expand the possibilities for their use. Pneumatic pincer feeders do not require large amounts of production time for installation, connection and adjustment."
+        }
+      ]
+    }
+  ]
+}

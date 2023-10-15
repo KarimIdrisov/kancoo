@@ -1,0 +1,133 @@
+main.about{
+  @media (width <= $desktop){ padding-top: 2.19rem; }
+  @media (width > $desktop){ padding-top: 3.44rem; }
+
+  .bg::before{ background: linear-gradient(8deg, #FFF 0%, rgba(205, 236, 255, 0.50) 100%); }
+
+  section.firm{
+    .title{
+      @media (width <= $desktop){ margin-bottom: 1.25rem; }
+      @media (width > $desktop){ margin-bottom: 3.75rem; }
+    }
+
+    .carousel{
+      overflow: auto;
+      width: 100%;
+      display: flex;
+      gap: 1.25rem;
+      img{
+        flex-shrink: 0;
+        object-fit: cover;
+        @media (width <= $desktop){ width: 6.6875rem; }
+        @media (width > $desktop){ width: 21.875rem; }
+        @media (width <= $desktop){ height: 6.6875rem; }
+        @media (width > $desktop){ height: 21.875rem; }
+      }
+    }
+  }
+
+  section.services{
+    .title{
+      @media (width <= $desktop){ margin-bottom: .62rem; }
+      @media (width > $desktop){ margin-bottom: 1.25rem; }
+    }
+    .description{ max-width: 37.5rem; }
+    .cards{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      @media (width <= $desktop){ grid-template-rows: repeat(6, 1fr); }
+      @media (width > $desktop){ grid-template-rows: repeat(3, 1fr); }
+      @media (width <= $desktop){ gap: .62rem; }
+      @media (width > $desktop){ gap: 1.56rem; }
+      @media (width <= $desktop){ padding-top: 1.25rem; }
+      @media (width > $desktop){ padding-top: 2.5rem; }
+      .card{
+        @media (width <= $desktop){ padding: 1.37rem .7rem 1.37rem .71rem; }
+        @media (width > $desktop){ padding: 2.36rem 1.21rem 2.36rem 1.22rem; }
+        @media (width <= $desktop){
+          &.card-0 { grid-area: 1 / 1 / 2 / 3; }
+          &.card-1 { grid-area: 1 / 3 / 2 / 6; }
+          &.card-2 { grid-area: 2 / 1 / 4 / 4; }
+          &.card-3 { grid-area: 2 / 4 / 3 / 6; }
+          &.card-4 { grid-area: 3 / 4 / 4 / 6; }
+          &.card-5 { grid-area: 4 / 1 / 5 / 4; }
+          &.card-6 { grid-area: 4 / 4 / 5 / 6; }
+          &.card-7 { grid-area: 5 / 1 / 7 / 3; }
+          &.card-8 { grid-area: 5 / 3 / 7 / 6; }
+        }
+        @media (width > $desktop){
+          &.card-0 { grid-area: 1 / 1 / 2 / 2; }
+          &.card-1 { grid-area: 1 / 2 / 2 / 3; }
+          &.card-2 { grid-area: 1 / 4 / 3 / 6; }
+          &.card-3 { grid-area: 1 / 3 / 2 / 4; }
+          &.card-4 { grid-area: 2 / 1 / 3 / 2; }
+          &.card-5 { grid-area: 2 / 2 / 3 / 4; }
+          &.card-6 { grid-area: 3 / 1 / 4 / 2; }
+          &.card-7 { grid-area: 3 / 2 / 4 / 3; }
+          &.card-8 { grid-area: 3 / 3 / 4 / 6; }
+        }
+        &:hover{
+          background: $primary;
+          @media (width <= $desktop){ box-shadow: 0 .25rem .5rem rgb(#000, .25); }
+          @media (width > $desktop){ box-shadow: 0 .25rem 1rem rgb(#000, .25); }
+          @media (width > $desktop){ transform: translateY(.31rem); }
+          p{ color: #fff; }
+        }
+      }
+    }
+  }
+
+  section.q-a{
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    .title{
+      @media (width <= $desktop){ transform: translateY(4.44rem); }
+      @media (width > $desktop){ transform: translateY(5rem); }
+    }
+    .q-a-list{
+      @media (width <= $desktop){ max-width: 57.1794871795%; }
+      @media (width > $desktop){ max-width: 49.3125rem; }
+      display: flex;
+      flex-flow: column;
+      @media (width <= $desktop){ gap: 2.5rem; }
+      @media (width > $desktop){ gap: 3.75rem; }
+      // 57.1794871795
+    }
+    .question{
+      @media (width <= $desktop){ font-size: 1rem; }
+      @media (width > $desktop){ font-size: 1.5rem; }
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+    .answer{
+      color: $text;
+      @media (width <= $desktop){ font-size: .625rem; }
+      @media (width > $desktop){ font-size: 1.125rem; }
+    }
+  }
+
+  section.sertificates{
+    .title{
+      @media (width <= $desktop){ margin-bottom: 1.25rem; }
+      @media (width > $desktop){ margin-bottom: 3.75rem; }
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @media (width <= $desktop){ gap: .64rem; }
+      @media (width > $desktop){ gap: 2.27rem; }
+      .img-cont{
+        display: grid;
+        place-items: center;
+        background: #fff;
+        @media (width <= $desktop){ padding: .57rem .37rem; }
+        @media (width > $desktop){ padding: 2rem 1.28rem; }
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

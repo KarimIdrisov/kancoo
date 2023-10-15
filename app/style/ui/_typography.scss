@@ -1,0 +1,17 @@
+// Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+a{ text-decoration: none; }
+
+button, input, textarea{ font-family: inherit; }
+
+.title{
+  @media (width <= $desktop){ font-size: 2rem; }
+  @media (width > $desktop){ font-size: 5.125rem; }
+  font-weight: 500;
+}
+
+p{
+  @media (width <= $desktop){ font-size: .625rem; }
+  @media (width > $desktop){ font-size: 1.25rem; }
+}

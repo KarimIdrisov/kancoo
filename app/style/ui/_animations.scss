@@ -1,0 +1,8 @@
+$transition: .3s;
+
+.loading{
+  @keyframes loading{
+    to{ transform: rotate(360deg); }
+  }
+  animation: 1s loading linear forwards;
+}

@@ -1,0 +1,10 @@
+{
+  "contacts": {
+    "title": "Contacts",
+    "contactPerson": "The contact person",
+    "personName": "Eugene",
+    "phone": "Telephone",
+    "address": "Address",
+    "messangers": "Messengers"
+  }
+}
