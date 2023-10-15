@@ -63,7 +63,7 @@ main.home{
     
     .cont{
       @media (width <= $desktop){ max-width: 11.25rem; }
-      @media (width > $desktop){ max-width: 22.375rem; }
+      @media (width > $desktop){ max-width: 19rem; }
       display: flex;
       flex-flow: column;
       align-items: flex-start;
@@ -71,7 +71,7 @@ main.home{
       @media (width > $desktop){ gap: 1.25rem; }
       @media (width > $desktop){
         margin-inline: auto;
-        transform: translateX(-36%);
+        transform: translateX(-45%);
       }
     }
   }

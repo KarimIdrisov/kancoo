@@ -1282,7 +1282,7 @@ main.home section.hero .cont {
 }
 @media (width > 48rem) {
   main.home section.hero .cont {
-    max-width: 22.375rem;
+    max-width: 19rem;
   }
 }
 @media (width <= 48rem) {
@@ -1298,7 +1298,7 @@ main.home section.hero .cont {
 @media (width > 48rem) {
   main.home section.hero .cont {
     margin-inline: auto;
-    transform: translateX(-36%);
+    transform: translateX(-45%);
   }
 }
 main.home section.products {
