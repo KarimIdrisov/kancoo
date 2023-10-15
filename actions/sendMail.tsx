@@ -19,7 +19,7 @@ export default async (name: string, tel: string, email: string, message: string,
   const mailOptions = {
     from: process.env.EMAIL_FROM,
     to: process.env.EMAIL_TO,
-    subject: process.env.EMAIL_SUBJECT,
+    subject: "KANCOO Contact Form",
     html: `
       <p><b>Name</b>: ${name}</p>
       <p><b>Email</b>: ${email}</p>
