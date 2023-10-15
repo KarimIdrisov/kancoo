@@ -27,7 +27,7 @@ export default async ({ params: { category, locale } }: { params: { category: st
   return (
     <main className="products">
       <div className="bg" />
-      <Products json={locales[locale][category_num]} locale={locale} jsonContactForm={locales[locale][1]} />
+      <Products json={locales[locale][category_num]} locale={locale} jsonContactForm={locales[locale][5]} />
     </main>
   )
 }

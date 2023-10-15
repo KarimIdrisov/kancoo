@@ -896,7 +896,7 @@ section.contact-form.popout .bg {
 }
 section.contact-form.popout .wrapper {
   position: relative;
-  scroll-margin: 1rem;
+  scroll-margin: var(--wrapper-padding-inline);
 }
 section.contact-form.popout .wrapper .cross-cont {
   cursor: pointer;

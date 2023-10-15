@@ -20,7 +20,7 @@ section.contact-form{
     }
     .wrapper{
       position: relative;
-      scroll-margin: 1rem;
+      scroll-margin: var(--wrapper-padding-inline);
       .cross-cont{
         cursor: pointer;
         position: absolute;
