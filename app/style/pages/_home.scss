@@ -94,14 +94,8 @@ main.home{
       display: flex;
       @media (width <= $desktop){ gap: .62rem; }
       @media (width > $desktop){ gap: 1.25rem; }
-      @media (width <= $desktop){
-        padding: .62rem;
-        &:hover{ padding-bottom: .12rem; }
-      }
-      @media (width > $desktop){
-        padding: 1.25rem;
-        &:hover{ padding-bottom: .75rem; }
-      }
+      @media (width <= $desktop){ padding: .62rem; }
+      @media (width > $desktop){ padding: 1.25rem; }
       .card{
         flex-shrink: 0;
         display: flex;

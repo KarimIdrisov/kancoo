@@ -88,22 +88,8 @@ main > .bg::before {
 .carousel {
   padding-bottom: 0.25rem;
 }
-.carousel:not(:hover) {
-  padding-bottom: 0.75rem;
-}
-.carousel:not(:hover)::-webkit-scrollbar {
-  display: none;
-}
 .carousel::-webkit-scrollbar {
-  position: absolute;
-  height: 0.5rem;
-}
-.carousel::-webkit-scrollbar-thumb {
-  background: #bbb;
-  border-radius: 100vmax;
-}
-.carousel::-webkit-scrollbar-thumb:hover {
-  background: #aaa;
+  display: none;
 }
 
 body, a, button {
@@ -718,9 +704,6 @@ section.opportunities {
 @media (width <= 48rem) {
   section.opportunities .carousel {
     padding: 7rem 0.62rem 0.62rem 6.5rem;
-  }
-  section.opportunities .carousel:hover {
-    padding-bottom: 0.12rem;
   }
 }
 @media (width > 48rem) {
@@ -1342,16 +1325,10 @@ main.home section.products .carousel {
   main.home section.products .carousel {
     padding: 0.62rem;
   }
-  main.home section.products .carousel:hover {
-    padding-bottom: 0.12rem;
-  }
 }
 @media (width > 48rem) {
   main.home section.products .carousel {
     padding: 1.25rem;
-  }
-  main.home section.products .carousel:hover {
-    padding-bottom: 0.75rem;
   }
 }
 main.home section.products .carousel .card {

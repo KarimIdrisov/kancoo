@@ -41,19 +41,7 @@ section{
 
 .carousel{
   padding-bottom: .25rem;
-  &:not(:hover){
-    padding-bottom: .75rem;
-    &::-webkit-scrollbar{ display: none; }
-  }
   &::-webkit-scrollbar{
-    position: absolute;
-    height: .5rem;
-  }
-  &::-webkit-scrollbar-thumb{
-    background: #bbb;
-    border-radius: 100vmax;
-    &:hover{
-      background: #aaa;
-    }
+    display: none;
   }
 }
