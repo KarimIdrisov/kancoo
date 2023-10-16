@@ -22,8 +22,8 @@ export default async (name: string, tel: string, email: string, message: string,
     subject: "KANCOO Contact Form",
     html: `
       <p><b>Name</b>: ${name}</p>
-      <p><b>Email</b>: ${email}</p>
-      <p><b>Phone</b>: ${tel}</p>
+      <p><b>Email</b>: <a href="mailto:${email}">${email}</a></p>
+      <p><b>Phone</b>: <a href="tel:${tel}">${tel}</a></p>
       <p><b>Message</b>: ${message}</p>
     `,
     attachments
