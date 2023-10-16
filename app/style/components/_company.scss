@@ -25,10 +25,10 @@ section.company{
           justify-content: space-between;
           gap: 1.25rem;
         }
-        .video{
+        video{
+          width: 100%;
           @media (width <= $desktop){ grid-area: 1 / 1 / 2 / 2; }
           background: #fff;
-          aspect-ratio: 21.3125/12;
           @media (width <= $desktop){ margin-bottom: 1.88rem; }
         }
         .p1{

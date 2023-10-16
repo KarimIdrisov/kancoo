@@ -12,9 +12,7 @@ $desktop: 48rem;
   margin-inline: auto;
 }
 
-body{
-  position: relative;
-}
+body{ position: relative; }
 
 main > .bg{
   position: absolute;
@@ -26,6 +24,8 @@ main > .bg{
     inset: 0;
   }
 }
+
+img{ pointer-events: none; }
 
 section{
   @media (width <= $desktop){ margin-bottom: 6.25rem; }

@@ -59,6 +59,10 @@ main > .bg::before {
   inset: 0;
 }
 
+img {
+  pointer-events: none;
+}
+
 @media (width <= 48rem) {
   section {
     margin-bottom: 6.25rem;
@@ -614,17 +618,17 @@ section.company .grid .cont {
     gap: 1.25rem;
   }
 }
-section.company .grid .cont:nth-of-type(1) .video {
+section.company .grid .cont:nth-of-type(1) video {
+  width: 100%;
   background: #fff;
-  aspect-ratio: 21.3125/12;
 }
 @media (width <= 48rem) {
-  section.company .grid .cont:nth-of-type(1) .video {
+  section.company .grid .cont:nth-of-type(1) video {
     grid-area: 1/1/2/2;
   }
 }
 @media (width <= 48rem) {
-  section.company .grid .cont:nth-of-type(1) .video {
+  section.company .grid .cont:nth-of-type(1) video {
     margin-bottom: 1.88rem;
   }
 }
