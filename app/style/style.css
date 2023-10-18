@@ -5,6 +5,18 @@
   margin: 0;
 }
 
+html {
+  min-height: 100%;
+  display: flex;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
 .loading {
   animation: 1s loading linear forwards;
 }
@@ -23,18 +35,6 @@
   :root {
     --wrapper-padding-inline: 3.12rem;
   }
-}
-
-html {
-  min-height: 100%;
-  display: flex;
-}
-
-body {
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
 }
 
 .wrapper {
@@ -419,9 +419,6 @@ header menu .sublist a .arrow-right {
   transition: 0.3s;
 }
 
-footer {
-  margin-top: auto;
-}
 footer .container {
   display: flex;
   align-items: center;
