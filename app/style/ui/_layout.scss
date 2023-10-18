@@ -5,6 +5,18 @@ $desktop: 48rem;
   @media (width > $desktop){ --wrapper-padding-inline: 3.12rem; }
 }
 
+html{
+  min-height: 100%;
+  display: flex;
+}
+
+body{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
 .wrapper{
   width: 100%;
   max-width: 74.3125rem + 3.12rem;

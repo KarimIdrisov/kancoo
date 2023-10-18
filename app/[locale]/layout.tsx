@@ -15,10 +15,8 @@ export default ({ children, params: {locale} }: { children: React.ReactNode, par
   return (
     <html lang={locale}>
       <body className={montserrat.className}>
-        <div> {/* for footer always stay at bottom */}
-          <Header locale={locale} />
-          { children }
-        </div>
+        <Header locale={locale} />
+        { children }
         <Footer />
       </body>
     </html>

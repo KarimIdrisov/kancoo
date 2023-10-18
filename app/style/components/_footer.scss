@@ -1,4 +1,6 @@
 footer{
+  margin-top: auto;
+
   .container{
     display: flex;
     @media (width <= $desktop){ flex-flow: column-reverse; }

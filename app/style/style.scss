@@ -4,18 +4,6 @@
   margin: 0;
 }
 
-html{
-  min-height: 100%;
-  display: flex;
-}
-
-body{
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-}
-
 @import "./ui/animations";
 @import "./ui/layout";
 @import "./ui/colors";
