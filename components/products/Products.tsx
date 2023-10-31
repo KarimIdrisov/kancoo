@@ -1,44 +1,69 @@
 "use client"
 import Image from "next/image"
-import img_1 from "@/images/products/1.jpg"
-import img_2 from "@/images/products/2.jpg"
-import img_3 from "@/images/products/3.jpg"
-import img_4 from "@/images/products/4.jpg"
-import img_5 from "@/images/products/5.jpg"
-import img_6 from "@/images/products/6.jpg"
-import img_7 from "@/images/products/7.jpg"
-import img_8 from "@/images/products/8.jpg"
-import img_9 from "@/images/products/9.jpg"
-import img_10 from "@/images/products/10.png"
-import img_11 from "@/images/products/11.jpg"
-import img_12 from "@/images/products/12.jpg"
+import img_1 from "@/images/products/stamping/1.jpg"
+import img_2 from "@/images/products/stamping/2.jpg"
+import img_3 from "@/images/products/stamping/3.jpg"
+import img_4 from "@/images/products/stamping/4.jpg"
+import img_5 from "@/images/products/press-forms/5.jpg"
+import img_6 from "@/images/products/press-forms/6.jpg"
+import img_7 from "@/images/products/press-forms/7.jpg"
+import img_8 from "@/images/products/metalworking/8.jpg"
+import img_9 from "@/images/products/equipment/9.jpg"
+import img_10 from "@/images/products/equipment/10.png"
+import img_11 from "@/images/products/equipment/11.jpg"
+import img_12 from "@/images/products/equipment/12.jpg"
 import ArrowRightSVG from "@/images/products/arrow-right.svg"
 import ArrowRightMobileSVG from "@/images/products/arrow-right-mobile.svg"
 import CrossMobileSVG from "@/images/products/cross-mobile.svg"
 import CrossSVG from "@/images/products/cross.svg"
 import { useState } from "react"
 import ContactForm from "../contact/ContactForm"
+import jsonAllProducts_ru from "@/locales/products/ru.json"
+import jsonAllProducts_en from "@/locales/products/en.json"
+import jsonEquipment_ru from "@/locales/products/equipment/ru.json"
+import jsonMetalworking_ru from "@/locales/products/metalworking/ru.json"
+import jsonPressForms_ru from "@/locales/products/press_forms/ru.json"
+import jsonStamping_ru from "@/locales/products/stamping/ru.json"
+import jsonContactForm_ru from "@/locales/components/contact-form/ru.json"
+import jsonEquipment_en from "@/locales/products/equipment/en.json"
+import jsonMetalworking_en from "@/locales/products/metalworking/en.json"
+import jsonPressForms_en from "@/locales/products/press_forms/en.json"
+import jsonStamping_en from "@/locales/products/stamping/en.json"
+import jsonContactForm_en from "@/locales/components/contact-form/en.json"
 
-interface ProductsSectionInterface {
-  title: string
-  description?: string
-  to_order: string
-  contact: string
-  cards: [
-    {
-      name: string
-      about: [
-        {
-          title: string,
-          p: string | { name: string, p: string }[]
-        }
-      ]
+export default ({ category, locale }: { category?: string, locale: string }) => {
+  const locales: any = {
+    all_products: {
+      ru: jsonAllProducts_ru,
+      en: jsonAllProducts_en
+    },
+    contact: {
+      ru: jsonContactForm_ru,
+      en: jsonContactForm_en
+    },
+    categories: {
+      stamping: {
+        ru: jsonStamping_ru,
+        en: jsonStamping_en,
+        images: [img_1, img_2, img_3, img_4]
+      },
+      press_forms: {
+        ru: jsonPressForms_ru,
+        en: jsonPressForms_en,
+        images: [img_5, img_6, img_7]
+      },
+      metalworking: {
+        ru: jsonMetalworking_ru,
+        en: jsonMetalworking_en,
+        images: [img_8]
+      },
+      equipment: {
+        ru: jsonEquipment_ru,
+        en: jsonEquipment_en,
+        images: [img_9, img_10, img_11, img_12]
+      }
     }
-  ]
-}
-
-export default ({ json, locale, jsonContactForm }: { json: ProductsSectionInterface, locale: string, jsonContactForm: { [key: string]: string } }) => {
-  const imgs = [img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8, img_9, img_10, img_11, img_12]
+  }
   const [detailsOpened, setDetailsOpened] = useState(false)
   const [openedNumber, setOpenedNumber] = useState(0)
   const [contactForm, setContactForm] = useState(false)
@@ -52,26 +77,30 @@ export default ({ json, locale, jsonContactForm }: { json: ProductsSectionInterf
     })
   }
 
+  console.log(category)
+
   return (
     <section className="wrapper">
-      <div className="title">{ json.title }</div>
-      { json.description && <p dangerouslySetInnerHTML={{ __html: json.description }} /> }
+      <div className="title">{ category ? locales.categories[category][locale].title : locales.all_products[locale].title }</div>
+      { category && <p dangerouslySetInnerHTML={{ __html: locales.categories[category][locale].description }} /> }
 
       <div className="cards">
-        { json.cards.map((card, i) => (
-          <div className={`card ${detailsOpened && i === openedNumber ? "opened" : ""}`} onClick={() => handleCardClick(i)} key={i}>
-            <div>
-              <div className="card-title">{ card.name }</div>
-              <div className="to-order">{ json.to_order }</div>
-            </div>
-            <Image className="product-img" src={imgs[i]} alt="" placeholder="blur" />
-            <Image className="arrow-right" src={ArrowRightSVG} alt="" />
-            <Image className="arrow-right mobile" src={ArrowRightMobileSVG} alt="" />
-          </div>
+        { Object.keys(locales.categories).map((category_name, i) => (
+            category === category_name || undefined && locales.categories[category_name][locale].cards.map((card: any, j: number) => (
+              <div className={`card ${detailsOpened && i === openedNumber ? "opened" : ""}`} onClick={() => handleCardClick(i)} key={`${i}_${j}`}>
+                <div>
+                  <div className="card-title">{ card.name }</div>
+                  <div className="to-order">{ "TO ORDERRRRRRRRRRRRR" }</div>
+                </div>
+                <Image className="product-img" src={locales.categories[category_name].images[j]} alt="" placeholder="blur" />
+                <Image className="arrow-right" src={ArrowRightSVG} alt="" />
+                <Image className="arrow-right mobile" src={ArrowRightMobileSVG} alt="" />
+              </div>
+            ))
         )) }
       </div>
 
-      { detailsOpened && <div className="details card">
+      {/* { detailsOpened && <div className="details card">
         <button className="cross-cont" onClick={() => setDetailsOpened(false)}>
           <Image className="cross" src={CrossSVG} alt="" />
           <Image className="cross mobile" src={CrossMobileSVG} alt="" />
@@ -80,14 +109,14 @@ export default ({ json, locale, jsonContactForm }: { json: ProductsSectionInterf
           <Image src={imgs[openedNumber]} alt="" />
         </div>
         <div className="head">
-          <h1>{ json.cards[openedNumber].name }</h1>
-          <div className="to-order">{ json.to_order }</div>
-          <button className="btn" onClick={() => setContactForm(true)}>{ json.contact }</button>
+          <h1>{ locales[category][locale].cards[openedNumber].name }</h1>
+          <div className="to-order">{ locales[category][locale].to_order }</div>
+          <button className="btn" onClick={() => setContactForm(true)}>{ locales[category][locale].contact }</button>
         </div>
         <div className="about">
-          { json.cards[openedNumber].about.map((aboutItem, i) => (
+          { locales[category][locale].cards[openedNumber].about.map((aboutItem, i) => (
             <div key={i}>
-              <h2>{ aboutItem.title }</h2>
+              <h2>{ aboutItem.title }:</h2>
               { typeof aboutItem.p === "string" ? <p dangerouslySetInnerHTML={{ __html: aboutItem.p }} /> : aboutItem.p.map((pItem, j) => (
                 <p key={j}>
                   <span>{ `${ pItem.name }: ` }</span>
@@ -99,7 +128,7 @@ export default ({ json, locale, jsonContactForm }: { json: ProductsSectionInterf
         </div>
       </div> }
 
-      { contactForm && <ContactForm json={jsonContactForm} locale={locale} popout={() => setContactForm(false)} /> }
+      { contactForm && <ContactForm json={jsonContactForm} locale={locale} popout={() => setContactForm(false)} /> } */}
     </section>
   )
 }

@@ -45,7 +45,7 @@ export default ({ json, locale, products }: { json: { [key: string]: string }, l
               { products.stamping }
               <Image className="arrow-right" src={ArrowRightSVG} alt="" />
             </Link>
-            <Link href={`/${locale}/products/press-forms`} onClick={handleCloseAll}>
+            <Link href={`/${locale}/products/press_forms`} onClick={handleCloseAll}>
               { products.pressForms }
               <Image className="arrow-right" src={ArrowRightSVG} alt="" />
             </Link>
@@ -55,10 +55,6 @@ export default ({ json, locale, products }: { json: { [key: string]: string }, l
             </Link>
             <Link href={`/${locale}/products/equipment`} onClick={handleCloseAll}>
               { products.equipment }
-              <Image className="arrow-right" src={ArrowRightSVG} alt="" />
-            </Link>
-            <Link href={`/${locale}/products/plastic-molding`} onClick={handleCloseAll}>
-              { products.plasticMolding }
               <Image className="arrow-right" src={ArrowRightSVG} alt="" />
             </Link>
           </div>
@@ -97,10 +93,6 @@ export default ({ json, locale, products }: { json: { [key: string]: string }, l
               </Link>
               <Link href={`/${locale}/products/equipment`} onClick={handleCloseAll}>
                 { products.equipment }
-                <Image className="arrow-right" src={ArrowRightMobileSVG} alt="" />
-              </Link>
-              <Link href={`/${locale}/products/plastic-molding`} onClick={handleCloseAll}>
-                { products.plasticMolding }
                 <Image className="arrow-right" src={ArrowRightMobileSVG} alt="" />
               </Link>
             </div>

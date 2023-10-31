@@ -1540,17 +1540,17 @@ main.products .bg::before {
   }
 }
 @media (width > 48rem) {
-  main.products section p {
+  main.products section > p {
     font-size: 1rem;
   }
 }
 @media (width <= 48rem) {
-  main.products section p {
+  main.products section > p {
     margin-top: 0.62rem;
   }
 }
 @media (width > 48rem) {
-  main.products section p {
+  main.products section > p {
     margin-top: 1.25rem;
   }
 }

@@ -1,0 +1,62 @@
+{
+  "title": "Press forms",
+  "description": "We carry out metal processing, produce metal products to order according to your drawings and sketches. Our company is focused on serial and small-scale production for you.<br/><br/>We process both non-ferrous metals such as brass, copper, aluminum, stainless steel, and ferrous metals such as steel 45, 40X, special steels and alloys.",
+  "to_order": "to order",
+  "contact": "write to us",
+  "cards": [
+    {
+      "name": "Cold runner molds",
+      "about": [
+        {
+          "title": "Characteristics",
+          "p": [
+            {
+              "name": "Manufacturer",
+              "p": "Own production"
+            }
+          ]
+        },
+        {
+          "title": "Description",
+          "p": "We can order the production of molds from highly resistant materials, with the use of special coating technology on the surface of the mold-forming units, as well as, in the case of small volumes, to use methods that can reduce the cost of the mold. We will find the most favorable variant of production, suitable for a particular product with the required circulation. Drawings are coordinated in Russian language, the package of drawings is also provided in Russian language for the convenience of mold maintenance."
+        }
+      ]
+    },
+    {
+      "name": "Hot runner molds",
+      "about": [
+        {
+          "title": "Characteristics",
+          "p": [
+            {
+              "name": "Manufacturer",
+              "p": "Own production"
+            }
+          ]
+        },
+        {
+          "title": "Description",
+          "p": "Our advantages:<br/>1. Customized Solutions: We develop hot runner molds that are fully customized to meet your unique requirements. Our team of engineers and designers are ready to turn your ideas into reality.<br/>2. High Quality: We strive for outstanding quality in every detail. Our molds are manufactured using the latest materials and technology to ensure long and reliable operation.<br/>3. Efficiency: Our hot runner molds help you optimize your plastic molding process, increasing productivity and reducing production costs.<br/>4. Technical Support: We provide highly qualified technical support at all stages of cooperation, ensuring that your products meet the highest standards.<br/>5. Flexible cooperation terms: No matter the size of your project, we are ready to cooperate with you to achieve your goals.<br/><br/>We are proud of our reputation as a reliable partner and guarantee that with our hot runner molds, your production will be one step ahead of the competition."
+        }
+      ]
+    },
+    {
+      "name": "Plastics molding",
+      "about": [
+        {
+          "title": "Characteristics",
+          "p": [
+            {
+              "name": "Manufacturer",
+              "p": "Own production"
+            }
+          ]
+        },
+        {
+          "title": "Description",
+          "p": "We work with polystyrene, polypropylene, polyethylene, polycarbonate, ABS and polyamides. Molding of plastic parts is carried out both in large batches and small batch production. We are ready to fulfill, including piece orders.<br/><br/>For the manufacture of plastic parts requires a mold. It will contain all the characteristics of the future product: size, silhouette, presence of holes. If the customer does not have a mold, our company will design and manufacture it.<br/>We can cast a part from plastic and make a mold in the shortest possible time, which is possible due to the availability of our own production. Plastic injection molding production is carried out in accordance with safety and hygiene standards.<br/><br/>All plastic at our company has a certificate confirming the safety of the material and compliance with GOST standards. We directly cooperate with plastic manufacturers, thanks to which we can set favorable prices for the manufacture of plastic parts.<br/><br/>The cost of manufacturing plastic products to order is formed from several factors:<br/>- the need to manufacture a mold;<br/>- product complexity<br/>- product material;<br/>- batch size.<br/><br/>The price of plastic injection molding does not affect the quality of the parts we produce. We strive for the highest performance and at each stage of production we conduct tests to ensure that the product characteristics meet the specified parameters."
+        }
+      ]
+    }
+  ]
+}
