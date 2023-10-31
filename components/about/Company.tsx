@@ -8,7 +8,7 @@ export default ({ json }: { json: {[key: string]: string} }) => {
       <div className="grid">
         <div className="cont">
           <p className="p1" dangerouslySetInnerHTML={{ __html: json.p1 }} />
-          <video src={require('@/images/video.mp4')} autoPlay controls />
+          <video src={require('@/images/video.mp4')} autoPlay muted controls />
         </div>
         <div className="cont">
           <p className="p2" dangerouslySetInnerHTML={{ __html: json.p2 }} />

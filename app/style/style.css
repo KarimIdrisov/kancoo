@@ -5,18 +5,6 @@
   margin: 0;
 }
 
-html {
-  min-height: 100%;
-  display: flex;
-}
-
-body {
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-}
-
 .loading {
   animation: 1s loading linear forwards;
 }
@@ -35,6 +23,18 @@ body {
   :root {
     --wrapper-padding-inline: 3.12rem;
   }
+}
+
+html {
+  min-height: 100%;
+  display: flex;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 .wrapper {
@@ -419,6 +419,9 @@ header menu .sublist a .arrow-right {
   transition: 0.3s;
 }
 
+footer {
+  margin-top: auto;
+}
 footer .container {
   display: flex;
   align-items: center;
@@ -1524,7 +1527,7 @@ main.home section.benefits .grid img {
   }
 }
 main.products .bg::before {
-  background: linear-gradient(3deg, #FFF 0%, rgba(205, 236, 255, 0.5) 100%);
+  background: linear-gradient(54deg, #FFF 0%, rgba(205, 236, 255, 0.5) 100%);
 }
 @media (width <= 48rem) {
   main.products section {
@@ -1615,7 +1618,7 @@ main.products section .cards .card {
     transition: 0.3s;
   }
   main.products section .cards .card:hover {
-    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.25);
   }
 }
 main.products section .cards .card.opened .arrow-right {
@@ -1657,6 +1660,9 @@ main.products section .cards .card .to-order {
 main.products section .cards .card .product-img {
   align-self: center;
   height: auto;
+  aspect-ratio: 13.22075/12.70288;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (width <= 48rem) {
   main.products section .cards .card .product-img {
@@ -1686,6 +1692,7 @@ main.products section .details {
   position: relative;
   display: flex;
   flex-flow: column;
+  align-items: flex-start;
   scroll-margin: var(--wrapper-padding-inline);
 }
 @media (width <= 48rem) {
@@ -1729,33 +1736,6 @@ main.products section .details .cross-cont .cross {
     display: none;
   }
 }
-@media (width > 48rem) {
-  main.products section .details .cont.up {
-    display: flex;
-    gap: 2.5rem;
-  }
-}
-@media (width <= 48rem) {
-  main.products section .details .cont.up {
-    margin-bottom: 1.25rem;
-  }
-}
-@media (width > 48rem) {
-  main.products section .details .cont.up {
-    margin-bottom: 2.5rem;
-  }
-}
-main.products section .details .img-cont {
-  display: grid;
-  place-items: center;
-  width: 91.3907284768%;
-  aspect-ratio: 1/1;
-}
-@media (width > 48rem) {
-  main.products section .details .img-cont {
-    max-width: 15rem;
-  }
-}
 @media (width <= 48rem) {
   main.products section .details .img-cont {
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
@@ -1763,7 +1743,17 @@ main.products section .details .img-cont {
 }
 @media (width > 48rem) {
   main.products section .details .img-cont {
-    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.5rem 1.5625rem rgba(0, 0, 0, 0.1);
+  }
+}
+@media (width <= 48rem) {
+  main.products section .details .img-cont {
+    padding: 1.78rem 1.72rem;
+  }
+}
+@media (width > 48rem) {
+  main.products section .details .img-cont {
+    padding: 0.69rem 0.87rem 0.62rem;
   }
 }
 @media (width <= 48rem) {
@@ -1771,13 +1761,44 @@ main.products section .details .img-cont {
     margin: 0 auto 1.25rem;
   }
 }
-main.products section .details .img-cont img {
-  width: 80%;
-  height: auto;
+@media (width > 48rem) {
+  main.products section .details .img-cont {
+    margin-bottom: 2.5rem;
+  }
+}
+@media (width <= 48rem) {
+  main.products section .details .img-cont img {
+    width: 100%;
+  }
+}
+@media (width <= 48rem) {
+  main.products section .details .img-cont img {
+    height: auto;
+  }
+}
+@media (width > 48rem) {
+  main.products section .details .img-cont img {
+    max-height: 12rem;
+  }
+}
+@media (width > 48rem) {
+  main.products section .details .img-cont img {
+    width: auto;
+  }
 }
 main.products section .details .head {
   max-width: 45.3125rem;
   margin-right: 1.5625rem;
+}
+@media (width <= 48rem) {
+  main.products section .details .head {
+    margin-bottom: 1.25rem;
+  }
+}
+@media (width > 48rem) {
+  main.products section .details .head {
+    margin-bottom: 2.5rem;
+  }
 }
 main.products section .details .head h1 {
   font-weight: 500;

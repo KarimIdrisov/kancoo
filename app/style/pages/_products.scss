@@ -2,7 +2,7 @@ main.products{
   @media (width <= $desktop){ padding-top: 2.19rem; }
   @media (width > $desktop){ padding-top: 3.44rem; }
 
-  .bg::before{ background: linear-gradient(3deg, #FFF 0%, rgba(205, 236, 255, 0.50) 100%); }
+  .bg::before{ background: linear-gradient(54deg, #FFF 0%, rgba(205, 236, 255, 0.50) 100%); }
 
   section{
     @media (width <= $desktop){ margin-bottom: 6.28rem; }
@@ -33,7 +33,7 @@ main.products{
         @media (width > $desktop){ padding: .94rem .94rem .91rem .94rem; }
         @media (width > $desktop){
           transition: $transition;
-          &:hover{ box-shadow: 0 .25rem .25rem 0 rgb(#000, .25); }
+          &:hover{ box-shadow: 0 .25rem 1rem 0 rgb(#000, .25); }
         }
         &.opened .arrow-right{ transform: rotate(90deg); }
         .card-title{
@@ -52,6 +52,9 @@ main.products{
           @media (width <= $desktop){ width: 80.5755395683%; }
           @media (width > $desktop){ width: 81.3583384615%; }
           height: auto;
+          aspect-ratio: 13.22075 / 12.70288;
+          object-fit: cover;
+          // 12.70288 * 81.3583384615 / 13.22075
         }
         .arrow-right{
           align-self: flex-end;
@@ -70,6 +73,7 @@ main.products{
       position: relative;
       display: flex;
       flex-flow: column;
+      align-items: flex-start;
       scroll-margin: var(--wrapper-padding-inline);
       @media (width <= $desktop){ padding: .53rem 1.25rem 1.25rem; }
       @media (width > $desktop){ padding: 2.81rem 3rem 2.81rem 2.94rem; }
@@ -92,33 +96,25 @@ main.products{
           &:not(.mobile){ @media (width <= $desktop){ display: none; } }
         }
       }
-      .cont{
-        &.up{
-          @media (width > $desktop){
-            display: flex;
-            gap: 2.5rem;
-          }
-          @media (width <= $desktop){ margin-bottom: 1.25rem; }
-          @media (width > $desktop){ margin-bottom: 2.5rem; }
-        }
-      }
       .img-cont{
-        @media (width > $desktop){ max-width: 15rem; }
-        display: grid;
-        place-items: center;
-        width: 91.3907284768%;
-        aspect-ratio: 1/1;
         @media (width <= $desktop){ box-shadow: 0 .25rem .5rem rgb(#000, .25); }
-        @media (width > $desktop){ box-shadow: 0 .25rem .25rem 0 rgb(#000, .25); }
+        @media (width > $desktop){ box-shadow: 0 .5rem 1.5625rem rgba(#000, .1); }
+        @media (width <= $desktop){ padding: 1.78rem 1.72rem; }
+        @media (width > $desktop){ padding: .69rem .87rem .62rem; }
         @media (width <= $desktop){ margin: 0 auto 1.25rem; }
+        @media (width > $desktop){ margin-bottom: 2.5rem; }
         img{
-          width: 80%;
-          height: auto;
+          @media (width <= $desktop){ width: 100%; }
+          @media (width <= $desktop){ height: auto; }
+          @media (width > $desktop){ max-height: 12rem; }
+          @media (width > $desktop){ width: auto; }
         }
       }
       .head{
         max-width: 45.3125rem;
         margin-right: 1.5625rem;
+        @media (width <= $desktop){ margin-bottom: 1.25rem; }
+        @media (width > $desktop){ margin-bottom: 2.5rem; }
         h1{
           font-weight: 500;
           @media (width <= $desktop){ font-size: 1rem; }
