@@ -24,22 +24,16 @@ import jsonEquipment_ru from "@/locales/products/equipment/ru.json"
 import jsonMetalworking_ru from "@/locales/products/metalworking/ru.json"
 import jsonPressForms_ru from "@/locales/products/press_forms/ru.json"
 import jsonStamping_ru from "@/locales/products/stamping/ru.json"
-import jsonContactForm_ru from "@/locales/components/contact-form/ru.json"
 import jsonEquipment_en from "@/locales/products/equipment/en.json"
 import jsonMetalworking_en from "@/locales/products/metalworking/en.json"
 import jsonPressForms_en from "@/locales/products/press_forms/en.json"
 import jsonStamping_en from "@/locales/products/stamping/en.json"
-import jsonContactForm_en from "@/locales/components/contact-form/en.json"
 
 export default ({ category, locale }: { category?: string, locale: string }) => {
   const locales: any = {
     all_products: {
       ru: jsonAllProducts_ru,
       en: jsonAllProducts_en
-    },
-    contact: {
-      ru: jsonContactForm_ru,
-      en: jsonContactForm_en
     },
     categories: {
       stamping: {
@@ -64,20 +58,21 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
       }
     }
   }
+  
   const [detailsOpened, setDetailsOpened] = useState(false)
-  const [openedNumber, setOpenedNumber] = useState(0)
+  const [openedCategory, setOpenedCategory] = useState(Object.keys(locales.categories)[0])
+  const [openedCard, setOpenedCard] = useState(0)
   const [contactForm, setContactForm] = useState(false)
 
-  const handleCardClick = (card_num: number) => {
+  const handleCardClick = (category_name: string, card_num: number) => {
     setDetailsOpened(true)
-    setOpenedNumber(card_num)
+    setOpenedCategory(category_name)
+    setOpenedCard(card_num)
     setTimeout(()=>{
       const details = document.querySelector('.details')
       details?.scrollIntoView({ behavior: "smooth" })
     })
   }
-
-  console.log(category)
 
   return (
     <section className="wrapper">
@@ -85,39 +80,39 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
       { category && <p dangerouslySetInnerHTML={{ __html: locales.categories[category][locale].description }} /> }
 
       <div className="cards">
-        { Object.keys(locales.categories).map((category_name, i) => (
-            category === category_name || undefined && locales.categories[category_name][locale].cards.map((card: any, j: number) => (
-              <div className={`card ${detailsOpened && i === openedNumber ? "opened" : ""}`} onClick={() => handleCardClick(i)} key={`${i}_${j}`}>
-                <div>
-                  <div className="card-title">{ card.name }</div>
-                  <div className="to-order">{ "TO ORDERRRRRRRRRRRRR" }</div>
-                </div>
-                <Image className="product-img" src={locales.categories[category_name].images[j]} alt="" placeholder="blur" />
-                <Image className="arrow-right" src={ArrowRightSVG} alt="" />
-                <Image className="arrow-right mobile" src={ArrowRightMobileSVG} alt="" />
+        { Object.keys(locales.categories).map((category_name, i) => (category_name === category || category === undefined) && (
+          locales.categories[category_name][locale].cards.map((card: any, j: number) => (
+            <div className={`card ${detailsOpened && openedCategory === category_name && openedCard === j ? "opened" : ""}`} onClick={() => handleCardClick(category_name, j)} key={`${i}_${j}`}>
+              <div>
+                <div className="card-title">{ card.name }</div>
+                <div className="to-order">{ "TO ORDERRRRRRRRRRRRR" }</div>
               </div>
-            ))
+              <Image className="product-img" src={locales.categories[category_name].images[j]} alt="" placeholder="blur" />
+              <Image className="arrow-right" src={ArrowRightSVG} alt="" />
+              <Image className="arrow-right mobile" src={ArrowRightMobileSVG} alt="" />
+            </div>
+          ))
         )) }
       </div>
 
-      {/* { detailsOpened && <div className="details card">
+      { detailsOpened && <div className="details card">
         <button className="cross-cont" onClick={() => setDetailsOpened(false)}>
           <Image className="cross" src={CrossSVG} alt="" />
           <Image className="cross mobile" src={CrossMobileSVG} alt="" />
         </button>
         <div className="img-cont card">
-          <Image src={imgs[openedNumber]} alt="" />
+          <Image src={locales.categories[openedCategory].images[openedCard]} alt="" />
         </div>
         <div className="head">
-          <h1>{ locales[category][locale].cards[openedNumber].name }</h1>
-          <div className="to-order">{ locales[category][locale].to_order }</div>
-          <button className="btn" onClick={() => setContactForm(true)}>{ locales[category][locale].contact }</button>
+          <h1>{ locales.categories[openedCategory][locale].cards[openedCard].name }</h1>
+          <div className="to-order">{ locales.categories[openedCategory][locale].to_order }</div>
+          <button className="btn" onClick={() => setContactForm(true)}>{ locales.categories[openedCategory][locale].contact }</button>
         </div>
         <div className="about">
-          { locales[category][locale].cards[openedNumber].about.map((aboutItem, i) => (
+          { locales.categories[openedCategory][locale].cards[openedCard].about.map((aboutItem: any, i: number) => (
             <div key={i}>
               <h2>{ aboutItem.title }:</h2>
-              { typeof aboutItem.p === "string" ? <p dangerouslySetInnerHTML={{ __html: aboutItem.p }} /> : aboutItem.p.map((pItem, j) => (
+              { typeof aboutItem.p === "string" ? <p dangerouslySetInnerHTML={{ __html: aboutItem.p }} /> : aboutItem.p.map((pItem: any, j: number) => (
                 <p key={j}>
                   <span>{ `${ pItem.name }: ` }</span>
                   { pItem.p }
@@ -128,7 +123,7 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
         </div>
       </div> }
 
-      { contactForm && <ContactForm json={jsonContactForm} locale={locale} popout={() => setContactForm(false)} /> } */}
+      { contactForm && <ContactForm locale={locale} popout={() => setContactForm(false)} /> }
     </section>
   )
 }

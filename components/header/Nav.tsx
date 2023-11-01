@@ -41,22 +41,12 @@ export default ({ json, locale, products }: { json: { [key: string]: string }, l
         <div className="list">
           <div>{ json.products }</div>
           <div className="sublist">
-            <Link href={`/${locale}/products/stamping`} onClick={handleCloseAll}>
-              { products.stamping }
-              <Image className="arrow-right" src={ArrowRightSVG} alt="" />
-            </Link>
-            <Link href={`/${locale}/products/press_forms`} onClick={handleCloseAll}>
-              { products.pressForms }
-              <Image className="arrow-right" src={ArrowRightSVG} alt="" />
-            </Link>
-            <Link href={`/${locale}/products/metalworking`} onClick={handleCloseAll}>
-              { products.metalworking }
-              <Image className="arrow-right" src={ArrowRightSVG} alt="" />
-            </Link>
-            <Link href={`/${locale}/products/equipment`} onClick={handleCloseAll}>
-              { products.equipment }
-              <Image className="arrow-right" src={ArrowRightSVG} alt="" />
-            </Link>
+            { Object.keys(products).map((product, i) => (
+              <Link href={`/${locale}/products/${product}`} onClick={handleCloseAll} key={i}>
+                { products[product] }
+                <Image className="arrow-right" src={ArrowRightSVG} alt="" />
+              </Link>
+            )) }
           </div>
         </div>
       </menu>
@@ -79,22 +69,12 @@ export default ({ json, locale, products }: { json: { [key: string]: string }, l
           <button onClick={() => setProductsMenuOpened(prevState => !prevState)}>{ json.products }</button>
           <div className={`sublist ${productsMenuOpened ? "" : "hidden"}`}>
             <div>
-              <Link href={`/${locale}/products/stamping`} onClick={handleCloseAll}>
-                { products.stamping }
-                <Image className="arrow-right" src={ArrowRightMobileSVG} alt="" />
-              </Link>
-              <Link href={`/${locale}/products/press-forms`} onClick={handleCloseAll}>
-                { products.pressForms }
-                <Image className="arrow-right" src={ArrowRightMobileSVG} alt="" />
-              </Link>
-              <Link href={`/${locale}/products/metalworking`} onClick={handleCloseAll}>
-                { products.metalworking }
-                <Image className="arrow-right" src={ArrowRightMobileSVG} alt="" />
-              </Link>
-              <Link href={`/${locale}/products/equipment`} onClick={handleCloseAll}>
-                { products.equipment }
-                <Image className="arrow-right" src={ArrowRightMobileSVG} alt="" />
-              </Link>
+              { Object.keys(products).map((product, i) => (
+                <Link href={`/${locale}/products/${product}`} onClick={handleCloseAll} key={i}>
+                  { products[product] }
+                  <Image className="arrow-right" src={ArrowRightMobileSVG} alt="" />
+                </Link>
+              )) }
             </div>
           </div>
           <Link href={`/${locale}/about`} onClick={handleCloseAll}>{ json.about }</Link>

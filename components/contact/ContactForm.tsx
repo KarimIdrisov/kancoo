@@ -7,8 +7,10 @@ import CrossMobileSVG from "@/images/contact/cross-mobile.svg"
 import CrossSVG from "@/images/contact/cross.svg"
 import Image from "next/image"
 import sendMail from "@/actions/sendMail"
-import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react"
+import { ChangeEvent, FormEvent, useRef, useState } from "react"
 import LoadingSVG from "@/images/contact/loading.svg"
+import jsonContactForm_ru from "@/locales/components/contact-form/ru.json"
+import jsonContactForm_en from "@/locales/components/contact-form/en.json"
 
 interface File {
   filename: string
@@ -17,8 +19,12 @@ interface File {
   encoding: string
 }
 
-export default ({ json, locale, popout }: { json: {[key: string]: string}, locale: string, popout?: () => void }) => {
-  const contactFormRef = useRef<HTMLElement>(null)
+export default ({ locale, popout }: { locale: string, popout?: () => void }) => {
+  const locales: any = {
+    ru: jsonContactForm_ru,
+    en: jsonContactForm_en
+  }
+  
   const [name, setName] = useState("")
   const [tel, setTel] = useState("")
   const [email, setEmail] = useState("")
@@ -77,14 +83,8 @@ export default ({ json, locale, popout }: { json: {[key: string]: string}, local
     setFiles(files.filter((file, index) => index !== i))
   }
 
-  useEffect(()=>{
-    if(popout) setTimeout(()=>{
-      contactFormRef.current?.querySelector('.wrapper')?.scrollIntoView({ behavior: "smooth" })
-    })
-  }, [popout])
-
   return (
-    <section ref={contactFormRef} className={`contact-form wrapper ${popout ? "popout" : ""}`}>
+    <section className={`contact-form wrapper ${popout ? "popout" : ""}`}>
       { popout && <div className="bg" onClick={popout} /> }
       
       <div className="wrapper card">
@@ -94,12 +94,12 @@ export default ({ json, locale, popout }: { json: {[key: string]: string}, local
         </div> }
 
         <form onSubmit={handleSubmit} encType="multipart/form-data">
-          <div className="title">{ json.title }</div>
+          <div className="title">{ locales[locale].title }</div>
           <div className="cont">
-            <input className={redInputs ? "red" : ""} type="text" value={name} onChange={e => { setName(e.target.value); setRedInputs(false) }} placeholder={ json.name } required />
-            <input className={redInputs ? "red" : ""} type="tel" value={tel} onChange={e => { setTel(e.target.value); setRedInputs(false) }} placeholder={ json.phone } required />
-            <input className={redInputs ? "red" : ""} type="email" value={email} onChange={e => { setEmail(e.target.value); setRedInputs(false) }} placeholder={ json.email } required />
-            <textarea className={redInputs ? "red" : ""} value={message} onChange={e => { setMessage(e.target.value); setRedInputs(false) }} placeholder={ json.message } required />
+            <input className={redInputs ? "red" : ""} type="text" value={name} onChange={e => { setName(e.target.value); setRedInputs(false) }} placeholder={ locales[locale].name } required />
+            <input className={redInputs ? "red" : ""} type="tel" value={tel} onChange={e => { setTel(e.target.value); setRedInputs(false) }} placeholder={ locales[locale].phone } required />
+            <input className={redInputs ? "red" : ""} type="email" value={email} onChange={e => { setEmail(e.target.value); setRedInputs(false) }} placeholder={ locales[locale].email } required />
+            <textarea className={redInputs ? "red" : ""} value={message} onChange={e => { setMessage(e.target.value); setRedInputs(false) }} placeholder={ locales[locale].message } required />
           </div>
 
           <div className="buttons">
@@ -108,7 +108,7 @@ export default ({ json, locale, popout }: { json: {[key: string]: string}, local
               <label htmlFor="fileInput">
                 <Image className="mobile" src={FileUploadMobileSVG} alt="" />
                 <Image src={FileUploadSVG} alt="" />
-                { !files.length && <span>{ json.file }</span> }
+                { !files.length && <span>{ locales[locale].file }</span> }
               </label>
               <div className="selected-files">
                 { files.map((file, i) => (
@@ -123,7 +123,7 @@ export default ({ json, locale, popout }: { json: {[key: string]: string}, local
               </div>
             </div>
             <button className={name.length && tel.length && email.length && message.length ? "" : "disabled"} onClick={name.length && tel.length && email.length && message.length ? ()=>{} : () => setRedInputs(true)}>
-              <span>{ json.send }</span>
+              <span>{ locales[locale].send }</span>
               { !formPending && <>
                 <Image className="mobile" src={ArrowRightMobileSVG} alt="" />
                 <Image src={ArrowRightSVG} alt="" />

@@ -1,7 +1,6 @@
 {
   "stamping": "Штамповка",
-  "pressForms": "Пресс-формы",
+  "press_forms": "Пресс-формы",
   "metalworking": "Металлообработка",
-  "equipment": "Оборудование",
-  "plasticMolding": "Литьё пластика"
+  "equipment": "Оборудование"
 }

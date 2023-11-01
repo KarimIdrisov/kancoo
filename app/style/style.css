@@ -862,22 +862,12 @@ section.opportunities .card-cont .card {
 
 section.contact-form.popout {
   max-width: unset;
+  position: fixed;
+  inset: 0;
   z-index: 1000;
   display: grid;
   place-items: center;
   margin-bottom: 0;
-}
-@media (width <= 48rem) {
-  section.contact-form.popout {
-    position: fixed;
-    inset: 0;
-  }
-}
-@media (width > 48rem) {
-  section.contact-form.popout {
-    position: absolute;
-    inset: 0;
-  }
 }
 section.contact-form.popout .bg {
   position: absolute;
@@ -886,7 +876,6 @@ section.contact-form.popout .bg {
 }
 section.contact-form.popout .wrapper {
   position: relative;
-  scroll-margin: var(--wrapper-padding-inline);
 }
 section.contact-form.popout .wrapper .cross-cont {
   cursor: pointer;

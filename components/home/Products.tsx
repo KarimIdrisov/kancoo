@@ -15,8 +15,7 @@ export default async ({ json, locale }: { json: {[key: string]: string}, locale:
     en: jsonProductsList_en
   }
 
-  const categories = ["stamping", "pressForms", "metalworking", "equipment"]
-  const URLs = ["stamping", "press-forms", "metalworking", "equipment"]
+  const categories = ["stamping", "press_forms", "metalworking", "equipment"]
   const images = [StampingIMG, PressFormsIMG, MetalworkingIMG, EquipmentIMG]
 
   return (
@@ -24,11 +23,11 @@ export default async ({ json, locale }: { json: {[key: string]: string}, locale:
       <h1 className="title">{ json.title }</h1>
       <p>{ json.about }</p>
       <div className="carousel">
-        { URLs.map((url, i) => (
-          <Link className="card" href={`${locale}/products/${url}`}>
+        { categories.map((category, i) => (
+          <Link className="card" href={`${locale}/products/${category}`}>
             <Image src={images[i]} alt="" placeholder="blur" />
             <div className="cont">
-              <span>{ locales[locale][categories[i]] }</span>
+              <span>{ locales[locale][category] }</span>
               <Image src={ArrowRightMobileSVG} alt="" />
               <Image src={ArrowRightSVG} alt="" />
             </div>

@@ -1,14 +1,8 @@
 section.contact-form{
   &.popout{
     max-width: unset;
-    @media (width <= $desktop){
-      position: fixed;
-      inset: 0;
-    }
-    @media (width > $desktop){
-      position: absolute;
-      inset: 0;
-    }
+    position: fixed;
+    inset: 0;
     z-index: 1000;
     display: grid;
     place-items: center;
@@ -20,7 +14,6 @@ section.contact-form{
     }
     .wrapper{
       position: relative;
-      scroll-margin: var(--wrapper-padding-inline);
       .cross-cont{
         cursor: pointer;
         position: absolute;
