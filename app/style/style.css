@@ -1860,7 +1860,7 @@ main.products section .details .about {
   }
 }
 main.products section .details .about h2 {
-  font-weight: 400;
+  font-weight: 500;
 }
 @media (width <= 48rem) {
   main.products section .details .about h2 {

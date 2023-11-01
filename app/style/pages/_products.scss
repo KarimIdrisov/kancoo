@@ -142,7 +142,7 @@ main.products{
         gap: 1.25rem;
         @media (width <= $desktop){ padding-bottom: .62rem; }
         h2{
-          font-weight: 400;
+          font-weight: 500;
           @media (width <= $desktop){ font-size: .75rem; }
           @media (width > $desktop){ font-size: 1.25rem; }
           @media (width <= $desktop){ margin-bottom: .31rem; }
