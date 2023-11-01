@@ -1,11 +1,11 @@
 {
   "title": "Equipment",
   "description": "We carry out metal processing, produce metal products to order according to your drawings and sketches. Our company is focused on serial and small-scale production for you.<br/><br/>We process both non-ferrous metals such as brass, copper, aluminum, stainless steel, and ferrous metals such as steel 45, 40X, special steels and alloys.",
-  "to_order": "to order",
   "contact": "write to us",
   "cards": [
     {
       "name": "Automated assembly machines for fittings",
+      "to_order": "Available on request",
       "about": [
         {
           "title": "Characteristics",
@@ -24,6 +24,7 @@
     },
     {
       "name": "Automated packaging machines",
+      "to_order": "Available on request",
       "about": [
         {
           "title": "Characteristics",
@@ -42,6 +43,7 @@
     },
     {
       "name": "Automated machines for the production of metalware",
+      "to_order": "Available on request",
       "about": [
         {
           "title": "Characteristics",
@@ -60,6 +62,7 @@
     },
     {
       "name": "Line for longitudinal cutting of metal",
+      "to_order": "Available on request",
       "about": [
         {
           "title": "Characteristics",

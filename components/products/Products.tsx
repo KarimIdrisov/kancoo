@@ -85,7 +85,7 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
             <div className={`card ${detailsOpened && openedCategory === category_name && openedCard === j ? "opened" : ""}`} onClick={() => handleCardClick(category_name, j)} key={`${i}_${j}`}>
               <div>
                 <div className="card-title">{ card.name }</div>
-                <div className="to-order">{ "TO ORDERRRRRRRRRRRRR" }</div>
+                <div className="to-order">{ card.to_order }</div>
               </div>
               <Image className="product-img" src={locales.categories[category_name].images[j]} alt="" placeholder="blur" />
               <Image className="arrow-right" src={ArrowRightSVG} alt="" />
@@ -105,7 +105,7 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
         </div>
         <div className="head">
           <h1>{ locales.categories[openedCategory][locale].cards[openedCard].name }</h1>
-          <div className="to-order">{ locales.categories[openedCategory][locale].to_order }</div>
+          <div className="to-order">{ locales.categories[openedCategory][locale].cards[openedCard].to_order }</div>
           <button className="btn" onClick={() => setContactForm(true)}>{ locales.categories[openedCategory][locale].contact }</button>
         </div>
         <div className="about">

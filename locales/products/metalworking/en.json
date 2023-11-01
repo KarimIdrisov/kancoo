@@ -1,11 +1,11 @@
 {
   "title": "Metalworking",
   "description": "We carry out metalworking, produce metal products to order according to your drawings and sketches. Our company is focused on serial and small batch production. We process both non-ferrous metals such as brass, copper, aluminum, stainless steels, and ferrous metals such as steel 45, 40X, special steels and alloys.<br/><br/>Our controllers check complex products 100%, because the parts are responsible and the first thing that is important for the customer is to get products not only on time, but also fully qualitative, that is 100% meet the technical requirements, which we provide.<br/><br/>We are always glad to have new cooperation, and especially long-term cooperation, because you understand that it is profitable to have long-term partnership relations and it is very important for you as a customer to have a reliable contractor and for us to have a time-tested customer.<br/><br/>To order metalworking on CNC just send us drawings of products, specify terms, material, we will calculate the cost of production in the shortest possible time and give you an answer.",
-  "to_order": "Available on request",
   "contact": "contact us",
   "cards": [
     {
       "name": "Machine tools according to your drawings",
+      "to_order": "Available on request",
       "about": [
         {
           "title": "Characteristics",
