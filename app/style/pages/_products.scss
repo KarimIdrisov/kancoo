@@ -97,13 +97,28 @@ main.products{
         }
       }
       .img-cont{
+        position: relative;
         @media (width <= $desktop){ box-shadow: 0 .25rem .5rem rgb(#000, .25); }
         @media (width > $desktop){ box-shadow: 0 .5rem 1.5625rem rgba(#000, .1); }
         @media (width <= $desktop){ padding: 1.78rem 1.72rem; }
         @media (width > $desktop){ padding: .69rem .87rem .62rem; }
         @media (width <= $desktop){ margin: 0 auto 1.25rem; }
         @media (width > $desktop){ margin-bottom: 2.5rem; }
-        img{
+        .prev-arrow, .next-arrow{
+          pointer-events: unset;
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+        }
+        .prev-arrow{
+          left: 0;
+          transform: translate(-50%, -50%);
+        }
+        .next-arrow{
+          right: 0;
+          transform: translate(50%, -50%);
+        }
+        .card-img{
           @media (width <= $desktop){ width: 100%; }
           @media (width <= $desktop){ height: auto; }
           @media (width > $desktop){ max-height: 12rem; }

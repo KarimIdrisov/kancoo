@@ -16,6 +16,8 @@ import ArrowRightSVG from "@/images/products/arrow-right.svg"
 import ArrowRightMobileSVG from "@/images/products/arrow-right-mobile.svg"
 import CrossMobileSVG from "@/images/products/cross-mobile.svg"
 import CrossSVG from "@/images/products/cross.svg"
+import prevArrowSVG from "@/images/products/prev-arrow.svg"
+import nextArrowSVG from "@/images/products/next-arrow.svg"
 import { useState } from "react"
 import ContactForm from "../contact/ContactForm"
 import jsonAllProducts_ru from "@/locales/products/ru.json"
@@ -74,6 +76,34 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
     })
   }
 
+  const handleSwitchCard = (direction: string) => {
+    const categories = Object.keys(locales.categories)
+    // prev card
+    if(direction === "+"){
+      if(openedCard === locales.categories[openedCategory].images.length-1){
+        if(category) setOpenedCard(0)
+        else{
+          const newOpenedCategory = categories.indexOf(openedCategory) === categories.length-1 ? categories[0] : categories[categories.indexOf(openedCategory)+1]
+          setOpenedCategory(newOpenedCategory)
+          setOpenedCard(0)
+        }
+      }
+      else setOpenedCard(openedCard + 1)
+    }
+    // next card
+    else if(direction === "-"){
+      if(!openedCard){
+        if(category) setOpenedCard(locales.categories[category].images.length-1)
+        else{
+          const newOpenedCategory = categories.indexOf(openedCategory) === 0 ? categories[categories.length-1] : categories[categories.indexOf(openedCategory)-1]
+          setOpenedCategory(newOpenedCategory)
+          setOpenedCard(locales.categories[newOpenedCategory].images.length-1)
+        }
+      }
+      else setOpenedCard(openedCard - 1)
+    }
+  }
+
   return (
     <section className="wrapper">
       <div className="title">{ category ? locales.categories[category][locale].title : locales.all_products[locale].title }</div>
@@ -101,7 +131,9 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
           <Image className="cross mobile" src={CrossMobileSVG} alt="" />
         </button>
         <div className="img-cont card">
-          <Image src={locales.categories[openedCategory].images[openedCard]} alt="" />
+          <Image className="prev-arrow" src={prevArrowSVG} alt="" onClick={() => handleSwitchCard("-")} />
+          <Image className="card-img" src={locales.categories[openedCategory].images[openedCard]} alt="" />
+          <Image className="next-arrow" src={nextArrowSVG} alt="" onClick={() => handleSwitchCard("+")} />
         </div>
         <div className="head">
           <h1>{ locales.categories[openedCategory][locale].cards[openedCard].name }</h1>
