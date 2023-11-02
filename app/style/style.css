@@ -2184,7 +2184,7 @@ main.about section.q-a .answer {
 }
 main.about section.sertificates .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 @media (width <= 48rem) {
   main.about section.sertificates .grid {
