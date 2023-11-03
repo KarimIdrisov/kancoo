@@ -6,7 +6,7 @@ module.exports = {
     return [
       {
         source: '/',
-        destination: '/en',
+        destination: '/ru',
         permanent: true
       }
     ]
