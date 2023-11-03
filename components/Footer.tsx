@@ -26,10 +26,6 @@ export default () => {
             <span>Mail</span>
           </a>
           <a href="/">
-            <Image src={icon_3} alt="" />
-            <span>Skype</span>
-          </a>
-          <a href="/">
             <Image src={icon_4} alt="" />
             <span>Telegram</span>
           </a>
