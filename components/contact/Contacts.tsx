@@ -36,12 +36,12 @@ export default ({ json }: { json: { [key: string]: string } }) => {
         <div className="item">
           <div>{ json.messangers }</div>
           <div className="links">
-            <a href="/" className="mobile"><Image src={img_1_mobile} alt="" /></a>
-            <a href="mailto:info@kancoo.ru" className="mobile"><Image src={img_2_mobile} alt="" /></a>
-            <a href="https://wa.me/+8618525484873" className="mobile"><Image src={img_3_mobile} alt="" /></a>
-            <a href="/"><Image src={img_1} alt="" /></a>
-            <a href="mailto:info@kancoo.ru"><Image src={img_2} alt="" /></a>
-            <a href="https://wa.me/+8618525484873"><Image src={img_3} alt="" /></a>
+            <a target="_blank" href="https://t.me/kancoomould" className="mobile"><Image src={img_1_mobile} alt="" /></a>
+            <a target="_blank" href="mailto:info@kancoo.ru" className="mobile"><Image src={img_2_mobile} alt="" /></a>
+            <a target="_blank" href="https://wa.me/+8618525484873" className="mobile"><Image src={img_3_mobile} alt="" /></a>
+            <a target="_blank" href="https://t.me/kancoomould"><Image src={img_1} alt="" /></a>
+            <a target="_blank" href="mailto:info@kancoo.ru"><Image src={img_2} alt="" /></a>
+            <a target="_blank" href="https://wa.me/+8618525484873"><Image src={img_3} alt="" /></a>
           </div>
         </div>
       </div>
