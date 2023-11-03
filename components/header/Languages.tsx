@@ -39,7 +39,7 @@ export default ({ json }: { json: { [key: string]: string } }) => {
           <div className="sublist">
             <Link href={`/ru/${path.substring(3)}`} onClick={() => setLanguageMenuOpened(false)}>Русский<Image className="arrow-right" src={ArrowRightSVG} alt="" /></Link>
             <Link href={`/en/${path.substring(3)}`} onClick={() => setLanguageMenuOpened(false)}>English<Image className="arrow-right" src={ArrowRightSVG} alt="" /></Link>
-            <Link href={`/jp/${path.substring(3)}`} onClick={() => setLanguageMenuOpened(false)}>日本語<Image className="arrow-right" src={ArrowRightSVG} alt="" /></Link>
+            {/* <Link href={`/jp/${path.substring(3)}`} onClick={() => setLanguageMenuOpened(false)}>日本語<Image className="arrow-right" src={ArrowRightSVG} alt="" /></Link> */}
           </div>
         </div>
       </menu>
@@ -54,7 +54,7 @@ export default ({ json }: { json: { [key: string]: string } }) => {
           <div className="sublist">
             <Link href={`/ru/${path.substring(3)}`} onClick={() => setLanguageMenuOpened(false)}>Русский<Image className="arrow-right" src={ArrowRightMobileSVG} alt="" /></Link>
             <Link href={`/en/${path.substring(3)}`} onClick={() => setLanguageMenuOpened(false)}>English<Image className="arrow-right" src={ArrowRightMobileSVG} alt="" /></Link>
-            <Link href={`/jp/${path.substring(3)}`} onClick={() => setLanguageMenuOpened(false)}>日本語<Image className="arrow-right" src={ArrowRightMobileSVG} alt="" /></Link>
+            {/* <Link href={`/jp/${path.substring(3)}`} onClick={() => setLanguageMenuOpened(false)}>日本語<Image className="arrow-right" src={ArrowRightMobileSVG} alt="" /></Link> */}
           </div>
         </div>
       </menu>

@@ -20,13 +20,13 @@ export default ({ json }: { json: { [key: string]: string } }) => {
         <div className="item">
           <div>{ json.phone }</div>
           <div className="bold">
-            <a href="tel:+79045876521">+79045876521</a>
+            <a href="tel:+79941012868">+79941012868</a>
           </div>
         </div>
         <div className="item">
           <div>Email</div>
           <div className="bold">
-            <a href="mailto:KANCOO@gmail.com">KANCOO@gmail.com</a>
+            <a href="mailto:info@kancoo.ru">info@kancoo.ru</a>
           </div>
         </div>
         <div className="item">
@@ -39,11 +39,9 @@ export default ({ json }: { json: { [key: string]: string } }) => {
             <a href="/" className="mobile"><Image src={img_1_mobile} alt="" /></a>
             <a href="mailto:info@kancoo.ru" className="mobile"><Image src={img_2_mobile} alt="" /></a>
             <a href="https://wa.me/+8618525484873" className="mobile"><Image src={img_3_mobile} alt="" /></a>
-            <a href="/" className="mobile"><Image src={img_4_mobile} alt="" /></a>
             <a href="/"><Image src={img_1} alt="" /></a>
             <a href="mailto:info@kancoo.ru"><Image src={img_2} alt="" /></a>
             <a href="https://wa.me/+8618525484873"><Image src={img_3} alt="" /></a>
-            <a href="/"><Image src={img_4} alt="" /></a>
           </div>
         </div>
       </div>

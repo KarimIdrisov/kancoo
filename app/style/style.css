@@ -1588,6 +1588,7 @@ main.products section .cards {
 }
 main.products section .cards .card {
   cursor: pointer;
+  max-width: 26.289375rem;
   display: flex;
   flex-flow: column;
   justify-content: space-between;

@@ -26,6 +26,7 @@ main.products{
       @media (width > $desktop){ margin-bottom: 1.31rem; }
       .card{
         cursor: pointer;
+        max-width: 26.289375rem;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
