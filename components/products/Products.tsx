@@ -1,17 +1,51 @@
 "use client"
 import Image from "next/image"
-import img_1 from "@/images/products/stamping/1.jpg"
-import img_2 from "@/images/products/stamping/2.jpg"
-import img_3 from "@/images/products/stamping/3.jpg"
-import img_4 from "@/images/products/stamping/4.jpg"
-import img_5 from "@/images/products/press-forms/5.jpg"
-import img_6 from "@/images/products/press-forms/6.jpg"
-import img_7 from "@/images/products/press-forms/7.jpg"
-import img_8 from "@/images/products/metalworking/8.jpg"
-import img_9 from "@/images/products/equipment/9.jpg"
-import img_10 from "@/images/products/equipment/10.png"
-import img_11 from "@/images/products/equipment/11.jpg"
-import img_12 from "@/images/products/equipment/12.jpg"
+import stamping_1_1 from "@/images/products/stamping/1_1.jpg"
+import stamping_1_2 from "@/images/products/stamping/1_2.png"
+import stamping_1_3 from "@/images/products/stamping/1_3.jpg"
+import stamping_1_4 from "@/images/products/stamping/1_4.jpg"
+import stamping_2_1 from "@/images/products/stamping/2_1.jpg"
+import stamping_2_2 from "@/images/products/stamping/2_2.jpg"
+import stamping_2_3 from "@/images/products/stamping/2_3.jpg"
+import stamping_2_4 from "@/images/products/stamping/2_4.jpg"
+import stamping_3_1 from "@/images/products/stamping/3_1.jpg"
+import stamping_3_2 from "@/images/products/stamping/3_2.jpg"
+import stamping_3_3 from "@/images/products/stamping/3_3.jpg"
+import stamping_3_4 from "@/images/products/stamping/3_4.jpg"
+import stamping_3_5 from "@/images/products/stamping/3_5.jpg"
+import stamping_3_6 from "@/images/products/stamping/3_6.jpg"
+import stamping_4_1 from "@/images/products/stamping/4_1.jpg"
+import stamping_4_2 from "@/images/products/stamping/4_2.jpg"
+import stamping_4_3 from "@/images/products/stamping/4_3.jpg"
+import stamping_4_4 from "@/images/products/stamping/4_4.jpg"
+import press_forms_1_1 from "@/images/products/press_forms/1_1.jpg"
+import press_forms_1_2 from "@/images/products/press_forms/1_2.jpg"
+import press_forms_1_3 from "@/images/products/press_forms/1_3.jpg"
+import press_forms_2_1 from "@/images/products/press_forms/2_1.jpg"
+import press_forms_2_2 from "@/images/products/press_forms/2_2.jpg"
+import press_forms_2_3 from "@/images/products/press_forms/2_3.jpg"
+import press_forms_3_1 from "@/images/products/press_forms/3_1.jpg"
+import press_forms_3_2 from "@/images/products/press_forms/3_2.jpg"
+import press_forms_3_3 from "@/images/products/press_forms/3_3.jpg"
+import press_forms_3_4 from "@/images/products/press_forms/3_4.jpg"
+import press_forms_3_5 from "@/images/products/press_forms/3_5.jpg"
+import press_forms_3_6 from "@/images/products/press_forms/3_6.jpg"
+import press_forms_3_7 from "@/images/products/press_forms/3_7.jpg"
+import metalworking_1_1 from "@/images/products/metalworking/1_1.jpg"
+import metalworking_1_2 from "@/images/products/metalworking/1_2.jpg"
+import metalworking_1_3 from "@/images/products/metalworking/1_3.jpg"
+import metalworking_1_4 from "@/images/products/metalworking/1_4.jpg"
+import metalworking_1_5 from "@/images/products/metalworking/1_5.jpg"
+import metalworking_1_6 from "@/images/products/metalworking/1_6.jpg"
+import metalworking_1_7 from "@/images/products/metalworking/1_7.jpg"
+import metalworking_1_8 from "@/images/products/metalworking/1_8.jpg"
+import equipment_1_1 from "@/images/products/equipment/1_1.jpg"
+import equipment_1_2 from "@/images/products/equipment/1_2.jpg"
+import equipment_1_3 from "@/images/products/equipment/1_3.jpg"
+import equipment_2_1 from "@/images/products/equipment/2_1.png"
+import equipment_3_1 from "@/images/products/equipment/3_1.jpg"
+import equipment_3_2 from "@/images/products/equipment/3_2.jpg"
+import equipment_4_1 from "@/images/products/equipment/4_1.jpg"
 import ArrowRightSVG from "@/images/products/arrow-right.svg"
 import ArrowRightMobileSVG from "@/images/products/arrow-right-mobile.svg"
 import CrossMobileSVG from "@/images/products/cross-mobile.svg"
@@ -41,22 +75,38 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
       stamping: {
         ru: jsonStamping_ru,
         en: jsonStamping_en,
-        images: [img_1, img_2, img_3, img_4]
+        images: [
+          [stamping_1_1, stamping_1_2, stamping_1_3, stamping_1_4],
+          [stamping_2_1, stamping_2_2, stamping_2_3, stamping_2_4],
+          [stamping_3_1, stamping_3_2, stamping_3_3, stamping_3_4, stamping_3_5, stamping_3_6],
+          [stamping_4_1, stamping_4_2, stamping_4_3, stamping_4_4],
+        ]
       },
       press_forms: {
         ru: jsonPressForms_ru,
         en: jsonPressForms_en,
-        images: [img_5, img_6, img_7]
+        images: [
+          [press_forms_1_1, press_forms_1_2, press_forms_1_3],
+          [press_forms_2_1, press_forms_2_2, press_forms_2_3],
+          [press_forms_3_1, press_forms_3_2, press_forms_3_3, press_forms_3_4, press_forms_3_5, press_forms_3_6, press_forms_3_7],
+        ]
       },
       metalworking: {
         ru: jsonMetalworking_ru,
         en: jsonMetalworking_en,
-        images: [img_8]
+        images: [
+          [metalworking_1_1, metalworking_1_2, metalworking_1_3, metalworking_1_4, metalworking_1_5, metalworking_1_6, metalworking_1_7, metalworking_1_8]
+        ]
       },
       equipment: {
         ru: jsonEquipment_ru,
         en: jsonEquipment_en,
-        images: [img_9, img_10, img_11, img_12]
+        images: [
+          [equipment_1_1, equipment_1_2, equipment_1_3],
+          [equipment_2_1],
+          [equipment_3_1, equipment_3_2],
+          [equipment_4_1]
+        ]
       }
     }
   }
@@ -64,12 +114,14 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
   const [detailsOpened, setDetailsOpened] = useState(false)
   const [openedCategory, setOpenedCategory] = useState(Object.keys(locales.categories)[0])
   const [openedCard, setOpenedCard] = useState(0)
+  const [openedImage, setOpenedImage] = useState(0)
   const [contactForm, setContactForm] = useState(false)
 
   const handleCardClick = (category_name: string, card_num: number) => {
     setDetailsOpened(true)
     setOpenedCategory(category_name)
     setOpenedCard(card_num)
+    setOpenedImage(0)
     setTimeout(()=>{
       const details = document.querySelector('.details')
       details?.scrollIntoView({ behavior: "smooth" })
@@ -78,29 +130,15 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
 
   const handleSwitchCard = (direction: string) => {
     const categories = Object.keys(locales.categories)
-    // prev card
+    // prev image
     if(direction === "+"){
-      if(openedCard === locales.categories[openedCategory].images.length-1){
-        if(category) setOpenedCard(0)
-        else{
-          const newOpenedCategory = categories.indexOf(openedCategory) === categories.length-1 ? categories[0] : categories[categories.indexOf(openedCategory)+1]
-          setOpenedCategory(newOpenedCategory)
-          setOpenedCard(0)
-        }
-      }
-      else setOpenedCard(openedCard + 1)
+      if(openedImage === locales.categories[openedCategory].images[openedCard].length-1) setOpenedImage(0)
+      else setOpenedImage(openedImage+1)
     }
-    // next card
+    // next image
     else if(direction === "-"){
-      if(!openedCard){
-        if(category) setOpenedCard(locales.categories[category].images.length-1)
-        else{
-          const newOpenedCategory = categories.indexOf(openedCategory) === 0 ? categories[categories.length-1] : categories[categories.indexOf(openedCategory)-1]
-          setOpenedCategory(newOpenedCategory)
-          setOpenedCard(locales.categories[newOpenedCategory].images.length-1)
-        }
-      }
-      else setOpenedCard(openedCard - 1)
+      if(!openedImage) setOpenedImage(locales.categories[openedCategory].images[openedCard].length-1)
+      else setOpenedImage(openedImage-1)
     }
   }
 
@@ -117,7 +155,7 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
                 <div className="card-title">{ card.name }</div>
                 <div className="to-order">{ card.to_order }</div>
               </div>
-              <Image className="product-img" src={locales.categories[category_name].images[j]} alt="" placeholder="blur" />
+              <Image className="product-img" src={locales.categories[category_name].images[j][0]} alt="" placeholder="blur" />
               <Image className="arrow-right" src={ArrowRightSVG} alt="" />
               <Image className="arrow-right mobile" src={ArrowRightMobileSVG} alt="" />
             </div>
@@ -131,9 +169,9 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
           <Image className="cross mobile" src={CrossMobileSVG} alt="" />
         </button>
         <div className="img-cont card">
-          <Image className="prev-arrow" src={prevArrowSVG} alt="" onClick={() => handleSwitchCard("-")} />
-          <Image className="card-img" src={locales.categories[openedCategory].images[openedCard]} alt="" />
-          <Image className="next-arrow" src={nextArrowSVG} alt="" onClick={() => handleSwitchCard("+")} />
+          { locales.categories[openedCategory].images[openedCard].length > 1 && <Image className="prev-arrow" src={prevArrowSVG} alt="" onClick={() => handleSwitchCard("-")} /> }
+          <Image className="card-img" src={locales.categories[openedCategory].images[openedCard][openedImage]} alt="" />
+          { locales.categories[openedCategory].images[openedCard].length > 1 && <Image className="next-arrow" src={nextArrowSVG} alt="" onClick={() => handleSwitchCard("+")} /> }
         </div>
         <div className="head">
           <h1>{ locales.categories[openedCategory][locale].cards[openedCard].name }</h1>
