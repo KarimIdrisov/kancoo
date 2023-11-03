@@ -1195,7 +1195,7 @@ main.home section.hero .bg-images img:nth-of-type(2) {
 }
 @media (width > 48rem) {
   main.home section.hero .bg-images img:nth-of-type(2) {
-    transform: translate(13%, 29%) rotate(-132.92deg);
+    transform: translate(calc(-50vw + 67%), 29%) rotate(-132.92deg);
   }
 }
 @media (width <= 48rem) {

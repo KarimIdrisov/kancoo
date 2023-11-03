@@ -30,7 +30,7 @@ main.home{
             height: 18.625rem;
             transform: translate(38%, 3%) rotate(138.837deg);
           }
-          @media (width > $desktop){ transform: translate(13%, 29%) rotate(-132.92deg); }
+          @media (width > $desktop){ transform: translate(calc(-50vw + 67%), 29%) rotate(-132.92deg); }
         }
         &:nth-of-type(3){
           @media (width <= $desktop){ display: none; }
