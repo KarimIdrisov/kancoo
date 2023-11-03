@@ -147,6 +147,7 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
       <div className="title">{ category ? locales.categories[category][locale].title : locales.all_products[locale].title }</div>
       { category && <p dangerouslySetInnerHTML={{ __html: locales.categories[category][locale].description }} /> }
 
+      {/* cards */}
       <div className="cards">
         { Object.keys(locales.categories).map((category_name, i) => (category_name === category || category === undefined) && (
           locales.categories[category_name][locale].cards.map((card: any, j: number) => (
@@ -163,21 +164,25 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
         )) }
       </div>
 
+      {/* product details (opens on card click) */}
       { detailsOpened && <div className="details card">
         <button className="cross-cont" onClick={() => setDetailsOpened(false)}>
           <Image className="cross" src={CrossSVG} alt="" />
           <Image className="cross mobile" src={CrossMobileSVG} alt="" />
         </button>
+        {/* product images */}
         <div className="img-cont card">
           { locales.categories[openedCategory].images[openedCard].length > 1 && <Image className="prev-arrow" src={prevArrowSVG} alt="" onClick={() => handleSwitchCard("-")} /> }
           <Image className="card-img" src={locales.categories[openedCategory].images[openedCard][openedImage]} alt="" />
           { locales.categories[openedCategory].images[openedCard].length > 1 && <Image className="next-arrow" src={nextArrowSVG} alt="" onClick={() => handleSwitchCard("+")} /> }
         </div>
+        {/* product name && contact btn */}
         <div className="head">
           <h1>{ locales.categories[openedCategory][locale].cards[openedCard].name }</h1>
           <div className="to-order">{ locales.categories[openedCategory][locale].cards[openedCard].to_order }</div>
-          <button className="btn" onClick={() => setContactForm(true)}>{ locales.categories[openedCategory][locale].contact }</button>
+          <button className="btn" onClick={() => setContactForm(true)}>{ locales.all_products[locale].contact }</button>
         </div>
+        {/* about section */}
         <div className="about">
           { locales.categories[openedCategory][locale].cards[openedCard].about.map((aboutItem: any, i: number) => (
             <div key={i}>
@@ -193,6 +198,7 @@ export default ({ category, locale }: { category?: string, locale: string }) => 
         </div>
       </div> }
 
+      {/* contact form */}
       { contactForm && <ContactForm locale={locale} popout={() => setContactForm(false)} /> }
     </section>
   )
