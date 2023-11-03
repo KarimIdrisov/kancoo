@@ -10,7 +10,9 @@ interface File {
 
 export default async (name: string, tel: string, email: string, message: string, attachments: File[]) => {
   const transporter = nodemailer.createTransport({
-    service: process.env.EMAIL_SERVICE,
+    host: process.env.EMAIL_HOST,
+    secure: true,
+    port: 465,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS
@@ -30,7 +32,7 @@ export default async (name: string, tel: string, email: string, message: string,
   }
   transporter.sendMail(mailOptions, (err, info)=>{
     if(err){
-      console.error("Uh oh - email couldn't be sent: \n", err)
+      console.error("--------------------\n--------------------\n--------------------\nUh oh - email couldn't be sent: \n", err)
       return 1
     }
     else console.log("Email sent: ", info.response)
