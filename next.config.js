@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const withVideos = require('next-videos')
-
-module.exports = withVideos({
+module.exports = {
   // redirects from "/" to "/en"
   redirects: async () => {
     return [
@@ -18,4 +16,4 @@ module.exports = withVideos({
     serverActions: true,
     serverActionsBodySizeLimit: '1gb'
   }
-})
+}
