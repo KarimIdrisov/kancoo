@@ -11,8 +11,8 @@ interface File {
 export default async (name: string, tel: string, email: string, message: string, attachments: File[]) => {
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
-    secure: true,
-    port: 465,
+    secure: false,
+    port: 587,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS
@@ -20,7 +20,7 @@ export default async (name: string, tel: string, email: string, message: string,
   })
   const mailOptions = {
     from: process.env.EMAIL_FROM,
-    to: process.env.EMAIL_TO,
+    to: [String(process.env.EMAIL_TO_1), String(process.env.EMAIL_TO_2)],
     subject: "KANCOO Contact Form",
     html: `
       <p><b>Name</b>: ${name}</p>
