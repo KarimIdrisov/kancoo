@@ -59,14 +59,14 @@ export default ({ locale, popout }: { locale: string, popout?: () => void }) => 
       reader.readAsDataURL(file)
     })
 
-    Promise.all(promises).then(() => {
-      sendMail(name, tel, email, message, attachments)
+    Promise.all(promises).then(async () => {
+      await sendMail(name, tel, email, message, attachments)
         .then(res => {
-          if(res){
+          if(res) window.location.href = `/${locale}`
+          else {
             alert("There was an error sending the email")
             setFormPending(false)
           }
-          else window.location.href = `/${locale}`
         })
     }).catch(error => console.error(error))
   }

@@ -6,7 +6,7 @@
 }
 
 .loading {
-  animation: 1s loading linear forwards;
+  animation: 1s loading linear infinite;
 }
 @keyframes loading {
   to {
