@@ -614,6 +614,13 @@ section.company .grid {
 section.company .grid .cont {
   display: grid;
 }
+section.company .image{
+  padding-top: 16px;
+  width: full;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (width > 48rem) {
   section.company .grid .cont:nth-of-type(1) {
     grid-template-columns: 27.272727% 70.30303%;

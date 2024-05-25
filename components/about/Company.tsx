@@ -1,5 +1,6 @@
 import Image from "next/image"
 import CompanyIMG from "@/images/about/company/company.jpeg"
+import InfoImg from "@/images/about/info.jpeg"
 
 export default ({ json }: { json: {[key: string]: string} }) => {
   return (
@@ -15,6 +16,9 @@ export default ({ json }: { json: {[key: string]: string} }) => {
           <Image src={CompanyIMG} alt="" placeholder="blur" />
           <p dangerouslySetInnerHTML={{ __html: json.p3 }} />
         </div>
+      </div>
+      <div className="image">
+        <Image src={InfoImg} alt="" placeholder="blur"  />
       </div>
     </section>
   )
