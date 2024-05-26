@@ -17,9 +17,6 @@ export default ({ json }: { json: {[key: string]: string} }) => {
           <p dangerouslySetInnerHTML={{ __html: json.p3 }} />
         </div>
       </div>
-      <div className="image">
-        <Image src={InfoImg} alt="" placeholder="blur"  />
-      </div>
     </section>
   )
 }
